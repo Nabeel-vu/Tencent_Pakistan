@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://tencent.pk/sitemap_index.xml
+Sitemap: https://tencent.pk/sitemap.xml
