@@ -174,6 +174,20 @@
       border: 2px solid #4CAF50;
       box-shadow: 0 0 5px #4CAF50;
     }
+     @keyframes rainbow {
+            0% { color: red; }
+            14% { color: orange; }
+            28% { color: yellow; }
+            42% { color: green; }
+            57% { color: blue; }
+            71% { color: indigo; }
+            85% { color: violet; }
+            100% { color: red; }
+        }
+
+        .rainbow-heading {
+            animation: rainbow 4s linear infinite;
+        }
   </style>
 </head>
 <body>
@@ -186,6 +200,7 @@
   <p>Your ultimate destination to buy PUBG UC in Pakistan conveniently and securely.<br> 
     With our trusted payment partners EasyPaisa and JazzCash<br> You can easily top-up your PUBG Mobile account and unlock exciting in-game rewards and offers.</p><br><br>
 </div>
+<h2 class="rainbow-heading">Celebrate Eid with Special Pricing: Limited-Time Promotion</h2>
   <div class="package-container">
     <div class="package" onclick="selectPackage(this)">
       <h2 class="package-title"><img src="/Assets/uc_ico.webp" alt="uc_Icon">
