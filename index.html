@@ -67,6 +67,11 @@
       position: relative;
       cursor: pointer;
     }
+     .price-container {
+      display: flex;
+      justify-content: center;
+flex-direction: column;
+    }
 
     .package:hover {
       box-shadow: 0 0 5px #fff;
@@ -223,9 +228,12 @@
       <h2 class="package-title"><img src="/Assets/uc_ico.webp" alt="uc_Icon">
         60 <span class="bonus">+6</span></h2>
       <p class="package-image"></p><img src="/Assets/60.webp" alt="uc_image" style="width: 176px; height: 82px;">
-      <p class="package-old-price">250</p>
-      <p class="package-price">240 PKR</p>
+      
     </div>
+     <div class="price-container">
+        <p class="package-old-price">250</p>
+      <p class="package-price">240 PKR</p>
+        </div>
 
     <div class="package" onclick="selectPackage(this)">
       <h2 class="package-title"><img src="/Assets/uc_ico.webp" alt="uc_Icon">
