@@ -231,7 +231,7 @@
   <div class="package-container">
     <div class="package" onclick="selectPackage(this)">
       <h2 class="package-title"><img src="/Assets/uc_ico.webp" alt="uc_Icon">60 <span class="bonus">+6</span></h2>
-      <p class="package-image"></p><img src="/Assets/60.webp" alt="uc_image" style="width: 176px; height: 82px;"><br><br>
+      <p class="package-image"></p><img src="/Assets/60.webp" alt="uc_image" style="width: 176px; height: 82px;"><br><br><br><br>
       <div class="price-container">
         <p class="package-old-price">250</p>
       <p class="package-price">240 PKR</p>
@@ -353,7 +353,7 @@
 
       var packageName = selectedPackage.querySelector('.package-title').textContent;
       var packagePrice = selectedPackage.querySelector('.package-price').textContent;
-      var message = "I am interested in purchasing"+packageName+"UC Price: "+packagePrice+ ". My PUBG Player ID is: " + characterId;
+      var message = "I am interested in purchasing "+packageName+"UC Price: "+packagePrice+ ". My PUBG Player ID is: " + characterId;
 
       // Replace the following line with the actual WhatsApp URL to redirect the user
       var whatsappUrl = "https://api.whatsapp.com/send/?phone=923023336555&text=" + encodeURIComponent(message);
