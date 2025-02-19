@@ -108,11 +108,9 @@
       color: #fff;
       padding: 20px;
     }
-    h1 {
-      color: #fff;
-      margin-bottom: 10px;
+    h1, h2, h3 {
+      color: #ffcc00; /* PUBG-themed yellow */
     }
-    
     p {
       margin-bottom: 20px;
     }
@@ -141,28 +139,26 @@
   margin-right: 5px;
 }
     .package {
-      width: 234px;
-      height: 280px;
+      width: 250px;
       padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-       text-align: center;
-      position: relative;
-      cursor: pointer;
+      border: 2px solid #ffcc00;
+      border-radius: 10px;
+      text-align: center;
+      background-color: #262626;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 	  
-     .price-container {
-      text-align: center;
+     .package-container {
       display: flex;
-      flex-direction: column;
-      bottom: 35px;
-      position: absolute;
-      left: 0;
-      right: 0;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
     }
 
     .package:hover {
-      box-shadow: 0 0 5px #fff;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #ffcc00;
     }
 
     .package-title {
@@ -340,6 +336,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             you can easily top-up your PUBG Mobile account and unlock exciting in-game rewards and offers.</p>
     </div>
 <h2 class="rainbow-heading"></h2>
+<h2 class="rainbow-heading">Choose Your UC Package</h2>
   <div class="package-container">
     <div class="package" itemscope itemtype="http://schema.org/Offer" onclick="selectPackage(this)">
         <h2 class="package-title">60 <span class="bonus"></span></h2>
