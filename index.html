@@ -79,6 +79,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       flex-wrap: wrap;
       gap: 30px;
     }
+.package-title::before {
+  content: "";
+  background: url('/Assets/uc_ico.webp') no-repeat center;
+  background-size: contain;
+  width: 24px; /* Adjust size */
+  height: 24px;
+  display: inline-block;
+  margin-right: 5px;
+}
 
     .package {
       width: 234px;
@@ -90,6 +99,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       position: relative;
       cursor: pointer;
     }
+	  
      .price-container {
       text-align: center;
       display: flex;
@@ -277,7 +287,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2 class="rainbow-heading"></h2>
   <div class="package-container">
     <div class="package" itemscope itemtype="http://schema.org/Offer" onclick="selectPackage(this)">
-      <h2 class="package-title"><img src="/Assets/uc_ico.webp" alt="uc_Icon" itemprop="image">60 <span class="bonus"></span></h2>
+      <h2 class="package-title">60 <span class="bonus"></span></h2>
       <p class="package-image"></p><img src="/Assets/60.webp" alt="uc_image" itemprop="image" style="width: 70%; max-width: 100%;">
       <div class="price-container">
 	
