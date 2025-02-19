@@ -178,12 +178,20 @@
       margin-right: 5px;
       width: 24px;
       height: 24px;
+      
     }
 .package img {
   width: 70%;
   max-width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
+.package p {
+  margin-top: 10px; /* Adjust spacing between text and image */
+  position: relative;
+  z-index: 1;
+}
     .package-price {
       font-size: 20px;
       font-weight: bold;
@@ -192,7 +200,7 @@
 
      .package-old-price {
       text-decoration: line-through;
-	margin: 10px;
+	margin: 1px;
 	color: #999;
     }
    
@@ -237,8 +245,12 @@
     }
 
     .input-textbox {
-      padding: 5px;
+      padding: 10px;
       width: 200px;
+      border: 1px solid #ffcc00;
+      border-radius: 5px;
+      background-color: #333;
+      color: #fff;
     }
 
     .whatsapp-btn {
