@@ -232,3 +232,165 @@ html, body {
         .rainbow-heading {
             animation: rainbow 4s linear infinite;
         }
+
+        .footer {
+          background-color: #222;
+          color: #fff;
+          padding: 20px 0;
+          font-family: Arial, sans-serif;
+          text-align: center;
+      }
+      
+      .footer-container {
+          max-width: 1200px;
+          margin: 0 auto;
+      }
+      .footer-logo-section {
+        display: flex;
+        align-items: center; /* Align items vertically */
+        justify-content: center; /* Center content horizontally */
+        gap: 15px; /* Space between image and text */
+        text-align: center; /* Ensure text is centered */
+    }
+    
+    .footer-logo-section img {
+        max-width: 100px; /* Adjust size as needed */
+        height: auto;
+    }
+    .footer-social, .footer-payments {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .footer-social p, .footer-payments p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.social-icons, .payment-icons {
+    display: flex;
+    gap: 15px; /* Space between icons */
+}
+
+.social-icons img, .payment-icons img {
+    width: 40px; /* Adjust size as needed */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: center;  /* Center both sections horizontally */
+  align-items: center;  /* Align items vertically */
+  gap: 50px;  /* Space between social media and payments */
+  flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+  text-align: center;
+}
+      /* .footer-logo-section,
+      .footer-social,
+      .footer-payments,
+      .footer-contact {
+          padding: 15px 0;
+      } */
+      
+      .footer-logo-section img {
+          max-width: 150px;
+          margin-bottom: 10px;
+      }
+      .footer-social {
+        display: flex;
+        align-items: center;  /* Align text and icons vertically */
+        justify-content: center;  /* Center everything horizontally */
+        gap: 15px; /* Space between text and icons */
+        text-align: center;
+    }
+    
+    .footer-social p {
+        font-weight: bold;
+        margin: 0;
+    }
+    
+    .social-icons {
+        display: flex;
+        gap: 10px; /* Space between social media icons */
+    }
+    
+    .social-icons img {
+        width: 30px; /* Adjust size as needed */
+        height: auto;
+        transition: transform 0.3s ease; /* Smooth hover effect */
+    }
+    
+    .social-icons a:hover img {
+        transform: scale(1.1); /* Slight zoom effect on hover */
+    }
+    
+      /* .social-icons, .payment-icons {
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+          flex-wrap: wrap;
+      } */
+      
+      .social-icons img, .payment-icons img {
+          width: 40px;
+          height: 40px;
+      }
+      
+      /* Separator Line */
+      .footer-divider {
+          width: 100%;
+          margin: 20px auto;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      
+      .footer-contact {
+        text-align: center; /* Center align everything */
+    }
+    
+    .contact-content {
+        display: flex;
+        align-items: center; /* Align text and button vertically */
+        justify-content: center; /* Center content horizontally */
+        gap: 15px; /* Space between text and button */
+        flex-wrap: wrap; /* Allows wrapping on smaller screens */
+        max-width: 600px; /* Optional: Adjust width for better layout */
+        margin: auto;
+    }
+    
+    .customer-service-btn {
+        background-color: #ff9800;
+        color: white;
+        border: none;
+        padding: 10px 50px;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+    }
+    
+    .customer-service-btn:hover {
+        background-color: #ff8800;
+    }
+    .footer-contact {
+      text-align: left; /* Align text to the left */
+      margin-left: 20px; /* Adjust margin as needed */
+    }
+  
+  .footer-contact p {
+    margin-bottom: 0px; /* Reduce space below "Contact us" */
+}
+  .contact-content {
+      display: flex;
+      align-items: center; /* Align text and button vertically */
+      justify-content: space-between; /* Pushes text to left, button to right */
+      gap: 20px; /* Space between text and button */
+      max-width: 100%; /* Full width */
+      margin: auto;
+  }
+  
+  .customer-service-btn {
+      white-space: nowrap; /* Prevents button text from wrapping */
+  }
+  
+    
+      
