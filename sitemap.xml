@@ -16,7 +16,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://tencent.pk/static_page/terms/clean%20tencent%20terms%20of%20use</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- <url>
     <loc>https://tencent.pk/terms-of-service</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url> -->
+  <url>
+    <loc>https://tencent.pk/static_page/privacy/tencent%20pp%20as%20of%2025%20aug%202023</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
