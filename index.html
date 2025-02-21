@@ -70,7 +70,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 <h2 class="rainbow-heading"></h2>
 <h2 class="rainbow-heading">Choose Your UC Package</h2>
-  <div class="package-container">
+<div id="packages-section">
+<div class="package-container">
     <div class="package" itemscope itemtype="http://schema.org/Offer" onclick="selectPackage(this)">
         <h2 class="package-title">60 <span class="bonus"></span></h2>
         <p class="package-image"><picture>
@@ -172,10 +173,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
       -->
     </div>
+  </div>
   </div><br>
   <div class="input-container">
     <label for="character-id">Enter your PUBG Character ID:</label>&nbsp;
-<input id="character-id" class="input-textbox" type="text" pattern="[0-9]*" required="" inputmode="numeric">&nbsp;
+<input id="character-id" placeholder="123456789" class="input-textbox" type="text" pattern="[0-9]*" required="" inputmode="numeric">&nbsp;
     <button id="whatsapp-btn" class="whatsapp-btn" onclick="openWhatsApp()">
       <i class="fab fa-whatsapp"></i> Buy Now
     </button>
