@@ -7,6 +7,7 @@ function selectPackage(packageElem) {
 
     selectedPackage = packageElem;
     selectedPackage.classList.add('selected-package');
+    document.getElementById('packages-section').style.border = "";
 
     var whatsappBtn = document.getElementById('whatsapp-btn');
     if (whatsappBtn) {
@@ -25,10 +26,7 @@ function openWhatsApp() {
         // Highlight the packages section
         document.getElementById('packages-section').style.border = "2px solid red";
         return;
-    } else {
-        document.getElementById('packages-section').style.border = "";
     }
-
     if (!characterIdInput.value || characterIdInput.value.length < 10) {
         alert('Please enter a valid PUBG Character ID.');
         // Highlight the input field
