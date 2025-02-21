@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check PUBG ID</title>
+    <script>
+        function checkID() {
+            let charID = document.getElementById("charID").value;
+            if (charID === "") {
+                alert("Please enter a PUBG ID");
+                return;
+            }
+            
+            let formData = new FormData();
+            formData.append("id", charID);
+
+            fetch("get_name.php", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("result").innerHTML = data;
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                document.getElementById("result").innerHTML = "Failed to fetch data.";
+            });
+        }
+    </script>
+</head>
+<body>
+    <h2>Check PUBG ID</h2>
+    <input type="number" id="charID" placeholder="Enter PUBG ID">
+    <button onclick="checkID()">Check</button>
+    <p id="result"></p>
+</body>
+</html>
