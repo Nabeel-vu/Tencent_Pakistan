@@ -158,6 +158,7 @@ html, body {
       cursor: pointer;
       transition: background-color 0.3s ease;
       display: flex;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds depth */
       align-items: center;
       justify-content: center;
     }
@@ -316,7 +317,7 @@ html, body {
     }
     
     .customer-service-btn {
-        background-color: #ffa726;
+        background-color: lightgray;
         color: none;
         border: none;
         padding: 10px 50px;
@@ -325,6 +326,7 @@ html, body {
         border-radius: 5px;
         transition: background 0.3s ease;
         display: flex;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds depth */
     align-items: center;
     gap: 8px; /* Space between icon and text */
     }
