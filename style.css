@@ -128,10 +128,14 @@ span {
 }
 
 .package img {
-  width: auto; /* Keeps original width */
-  max-width: 100%; /* Responsive */
-  height: auto; /* Keeps aspect ratio */
-  object-fit: contain; /* Ensures full image is visible */
+  width: auto;
+  /* Keeps original width */
+  max-width: 100%;
+  /* Responsive */
+  height: auto;
+  /* Keeps aspect ratio */
+  object-fit: contain;
+  /* Ensures full image is visible */
 }
 
 
