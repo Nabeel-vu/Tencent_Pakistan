@@ -7,8 +7,7 @@ function selectPackage(packageElem) {
 
     selectedPackage = packageElem;
     selectedPackage.classList.add('selected-package');
-    document.getElementById('packages-section').style.border = "";
-
+    document.querySelector("#packages-section > div").style.border = "";
     var whatsappBtn = document.getElementById('whatsapp-btn');
     if (whatsappBtn) {
         whatsappBtn.disabled = false;
@@ -20,11 +19,10 @@ function selectPackage(packageElem) {
 
 function openWhatsApp() {
     var characterIdInput = document.getElementById('character-id');
-
     if (!selectedPackage) {
         alert('Please select the package you wish to purchase.');
         // Highlight the packages section
-        document.getElementById('packages-section').style.border = "2px solid red";
+        document.querySelector("#packages-section > div").style.border = "2px solid red";
         return;
     }
     if (!characterIdInput.value || characterIdInput.value.length < 10) {
