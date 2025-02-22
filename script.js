@@ -46,11 +46,4 @@ function openWhatsApp() {
     window.location.href = whatsappUrl;
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    let lazyImages = document.querySelectorAll(".lazy-footer");
 
-    lazyImages.forEach(img => {
-        img.src = img.getAttribute("data-src");
-        img.removeAttribute("data-src");
-    });
-});
