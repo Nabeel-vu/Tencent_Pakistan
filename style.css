@@ -179,12 +179,45 @@ span {
   color: #fff;
 }
 
+.lnk-btn {
+  display: inline-block;
+  background: #ff9800;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* Adds depth */
+  /* Bright color for visibility */
+  color: #ffffff;
+  /* White text for contrast */
+  padding: 12px 20px;
+  font-size: 16px;
+  margin-left: 25px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.lnk-btn:hover {
+  background: #e68900;
+  /* Slightly darker on hover */
+  transform: scale(1.05);
+  /* Slight zoom effect */
+}
+
+.lnk-btn:active {
+  background: #cc7700;
+  /* Even darker when clicked */
+  transform: scale(0.98);
+  /* Pressed effect */
+}
+
 .whatsapp-btn {
   margin-top: -1px;
   padding: 10px 20px;
   background-color: #25D366;
   color: #f2f2f2;
   border: none;
+  font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -396,12 +429,14 @@ span {
 
 /* Separator Line */
 .footer-divider {
-  width: 100%;
+  width: 85%;
   margin: 20px auto;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .footer-contact {
+  display:grid;
+  justify-content: center;
   text-align: center;
   /* Center align everything */
 }
@@ -425,7 +460,8 @@ span {
   background-color: lightgray;
   color: none;
   border: none;
-  padding: 10px 50px;
+  font-weight: bold;
+  padding: 10px 45px;
   font-size: 14px;
   cursor: pointer;
   border-radius: 5px;
