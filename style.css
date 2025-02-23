@@ -435,7 +435,7 @@ span {
 }
 
 .footer-contact {
-  display:grid;
+  display: grid;
   justify-content: center;
   text-align: center;
   /* Center align everything */
