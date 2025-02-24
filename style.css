@@ -185,7 +185,7 @@ span {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   /* Adds depth */
   /* Bright color for visibility */
-  color: #f2f2f2;
+  color: #fff;
   /* White text for contrast */
   padding: 12px 20px;
   font-size: 16px;
@@ -215,7 +215,7 @@ span {
   margin-top: -1px;
   padding: 10px 20px;
   background-color: #1cbb51;
-  color: #f2f2f2;
+  color: #fff;
   border: none;
   font-weight: bold;
   border-radius: 5px;
