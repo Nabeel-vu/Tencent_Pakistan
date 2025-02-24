@@ -185,7 +185,7 @@ span {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   /* Adds depth */
   /* Bright color for visibility */
-  color: #ffffff;
+  color: #f2f2f2;
   /* White text for contrast */
   padding: 12px 20px;
   font-size: 16px;
@@ -214,7 +214,7 @@ span {
 .whatsapp-btn {
   margin-top: -1px;
   padding: 10px 20px;
-  background-color: #25D366;
+  background-color: #1cbb51;
   color: #f2f2f2;
   border: none;
   font-weight: bold;
@@ -235,7 +235,7 @@ span {
 }
 
 .whatsapp-btn:hover {
-  background-color: #128C7E;
+  background-color: #1ba995;
 }
 
 .trustpilot-widget-container {
@@ -310,7 +310,7 @@ span {
 }
 
 .footer {
-  background-color: #222;
+  background-color: #1e1e1e;
   color: #fff;
   padding: 20px 0;
   font-family: Arial, sans-serif;
