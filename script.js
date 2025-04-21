@@ -44,9 +44,11 @@ function openWhatsApp() {
     window.location.href = whatsappUrl;
 }
 //added new for redirecting the page upon opening inspect element
-(function detectDevToolsAndBreak() {
-    let devtoolsOpen = false;
+(function detectAndClose() {
+    const searchQuery = "Buy PUBG UC in Pakistan Tencent.pk";
+    const encodedQuery = encodeURIComponent(searchQuery);
     const element = new Image();
+    let devtoolsOpen = false;
 
     Object.defineProperty(element, 'id', {
         get: function () {
@@ -58,11 +60,13 @@ function openWhatsApp() {
         devtoolsOpen = false;
         console.log('%c', element);
         if (devtoolsOpen) {
-            document.body.innerHTML = "<h1 style='color:red;text-align:center;margin-top:20%'>DevTools is not allowed on this page!</h1>";
-            throw new Error("DevTools detected. Page terminated.");
+            // Redirect or close
+            window.location.href = `https://www.google.com/search?q=${encodedQuery}`;
+            // Or try: window.close(); (only works for tabs opened via JS)
         }
     }, 1000);
 })();
+
 
 
 
