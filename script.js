@@ -44,29 +44,35 @@ function openWhatsApp() {
     window.location.href = whatsappUrl;
 }
 //added new for redirecting the page upon opening inspect element
-(function detectAndClose() {
-    const searchQuery = "Buy PUBG UC in Pakistan Tencent.pk";
-    const encodedQuery = encodeURIComponent(searchQuery);
-    const element = new Image();
-    let devtoolsOpen = false;
+(function () {
+    let threshold = 160;
 
-    Object.defineProperty(element, 'id', {
-        get: function () {
-            devtoolsOpen = true;
+    function detectDevTools() {
+        const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+        const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+        if (widthThreshold || heightThreshold) {
+            document.body.innerHTML = "<h1 style='color:red;text-align:center;margin-top:20%'>Access Denied<br>Developer Tools Detected</h1>";
+            console.warn("DevTools Detected!");
         }
-    });
+    }
 
-    setInterval(() => {
-        devtoolsOpen = false;
-        console.log('%c', element);
-        if (devtoolsOpen) {
-            // Redirect or close
-            window.location.href = `https://www.google.com/search?q=${encodedQuery}`;
-            // Or try: window.close(); (only works for tabs opened via JS)
-        }
-    }, 1000);
+    setInterval(detectDevTools, 1000);
 })();
 
+// Disable right-click
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+// Disable F12, Ctrl+Shift+I, Ctrl+U, Ctrl+S, etc.
+document.onkeydown = function(e) {
+    if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && e.key === "I") ||
+        (e.ctrlKey && e.key === "U") ||
+        (e.ctrlKey && e.key === "S")
+    ) {
+        return false;
+    }
+};
 
 
 
