@@ -68,7 +68,7 @@ function openWhatsApp() {
                 document.getElementById('countdown').textContent = countdown;
                 if (countdown <= 0) {
                     clearInterval(countdownInterval);
-                    const searchQuery = "Buy PUBG UC in Pakistan Tencent.pk";
+                    const searchQuery = "Tencent.pk";
                     const encodedQuery = encodeURIComponent(searchQuery);
                     window.location.href = `https://www.google.com/search?q=${encodedQuery}`;
                 }
