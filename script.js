@@ -44,29 +44,18 @@ function openWhatsApp() {
     window.location.href = whatsappUrl;
 }
 //added new for redirecting the page upon opening inspect element
-(function detectAndClose() {
-    const searchQuery = "Buy PUBG UC in Pakistan Tencent.pk";
-    const encodedQuery = encodeURIComponent(searchQuery);
-    const element = new Image();
-    let devtoolsOpen = false;
-
-    Object.defineProperty(element, 'id', {
-        get: function () {
-            devtoolsOpen = true;
-        }
-    });
-
-    setInterval(() => {
-        devtoolsOpen = false;
-        console.log('%c', element);
-        if (devtoolsOpen) {
-            // Redirect or close
-            window.location.href = `https://www.google.com/search?q=${encodedQuery}`;
-            // Or try: window.close(); (only works for tabs opened via JS)
-        }
-    }, 1000);
-})();
-
+document.oncontextmenu = () => {
+    alert("Right Click disabled")
+    return false
+}
+document.onkeydown = e => {
+    if(e.key == "F12") {
+        return false
+    }
+    if(e.ctrlKey && e.key == "u") {
+        return false
+    }
+}
 
 
 
