@@ -44,6 +44,21 @@ function openWhatsApp() {
     window.location.href = whatsappUrl;
 }
 //added new for redirecting the page upon opening inspect element
+(function () {
+    let threshold = 160;
+
+    function detectDevTools() {
+        const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+        const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+        if (widthThreshold || heightThreshold) {
+            document.body.innerHTML = "<h1 style='color:red;text-align:center;margin-top:20%'>Access Denied<br>Developer Tools Detected</h1>";
+            console.warn("DevTools Detected!");
+        }
+    }
+
+    setInterval(detectDevTools, 1000);
+})();
+
 document.oncontextmenu = () => {
     alert("Right Click disabled")
     return false
@@ -52,7 +67,13 @@ document.onkeydown = e => {
     if(e.key == "F12") {
         return false
     }
+    if(e.ctrlKey && e.shiftKey && e.key === "I") {
+        return false
+    }
     if(e.ctrlKey && e.key == "u") {
+        return false
+    }
+    if(e.ctrlKey && e.key == "S") {
         return false
     }
 }
