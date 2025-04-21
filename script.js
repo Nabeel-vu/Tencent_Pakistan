@@ -59,9 +59,10 @@ function openWhatsApp() {
 
     setInterval(() => {
         devtoolsOpen = false;
-        console.log(element); // triggers the getter
+        console.log('%c', element); // Minimal visual log but still triggers the getter
         if (devtoolsOpen) {
-            // Redirect current page
+            console.warn("🚨 DevTools Detected!");
+            alert("Warning: Developer Tools Detected!");
             window.location.href = `https://www.google.com/search?q=${encodedQuery}`;
         }
     }, 1000);
