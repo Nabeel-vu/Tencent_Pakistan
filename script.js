@@ -46,18 +46,42 @@ function openWhatsApp() {
 //added new for redirecting the page upon opening inspect element
 (function () {
     let threshold = 160;
+    let redirected = false;
 
     function detectDevTools() {
         const widthThreshold = window.outerWidth - window.innerWidth > threshold;
         const heightThreshold = window.outerHeight - window.innerHeight > threshold;
-        if (widthThreshold || heightThreshold) {
-            document.body.innerHTML = "<h1 style='color:red;text-align:center;margin-top:20%'>Access Denied<br>Developer Tools Detected</h1>";
+        if ((widthThreshold || heightThreshold) && !redirected) {
+            redirected = true;
+
+            let countdown = 3;
+            const message = document.createElement('h1');
+            message.style.color = 'red';
+            message.style.textAlign = 'center';
+            message.style.marginTop = '20%';
+            message.innerHTML = `Access Denied<br>Developer Tools Detected<br>Redirecting in <span id='countdown'>${countdown}</span> seconds...`;
+            document.body.innerHTML = '';
+            document.body.appendChild(message);
+
+            const countdownInterval = setInterval(() => {
+                countdown--;
+                document.getElementById('countdown').textContent = countdown;
+                if (countdown <= 0) {
+                    clearInterval(countdownInterval);
+                    const searchQuery = "Buy PUBG UC in Pakistan Tencent.pk";
+                    const encodedQuery = encodeURIComponent(searchQuery);
+                    window.location.href = `https://www.google.com/search?q=${encodedQuery}`;
+                }
+            }, 1000);
+
             console.warn("DevTools Detected!");
         }
     }
 
-    setInterval(detectDevTools, 1000);
+    setInterval(detectDevTools, 500);
 })();
+
+
 
 document.oncontextmenu = () => {
     alert("Right Click disabled")
