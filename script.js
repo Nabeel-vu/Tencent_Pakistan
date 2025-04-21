@@ -44,29 +44,26 @@ function openWhatsApp() {
     window.location.href = whatsappUrl;
 }
 //added new for redirecting the page upon opening inspect element
-(function detectDevTools() {
-    const searchQuery = "Buy PUBG UC in Pakistan Tencent.pk";
-    const encodedQuery = encodeURIComponent(searchQuery);
-    const element = new Image();
+(function detectDevToolsAndBreak() {
     let devtoolsOpen = false;
+    const element = new Image();
 
     Object.defineProperty(element, 'id', {
         get: function () {
             devtoolsOpen = true;
-            return 'devtools';
         }
     });
 
     setInterval(() => {
         devtoolsOpen = false;
-        console.log('%c', element); // Minimal visual log but still triggers the getter
+        console.log('%c', element);
         if (devtoolsOpen) {
-            console.warn("🚨 DevTools Detected!");
-            alert("Warning: Developer Tools Detected!");
-            window.location.href = `https://www.google.com/search?q=${encodedQuery}`;
+            document.body.innerHTML = "<h1 style='color:red;text-align:center;margin-top:20%'>DevTools is not allowed on this page!</h1>";
+            throw new Error("DevTools detected. Page terminated.");
         }
     }, 1000);
 })();
+
 
 
 
