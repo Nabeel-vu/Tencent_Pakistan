@@ -43,5 +43,29 @@ function openWhatsApp() {
 
     window.location.href = whatsappUrl;
 }
+//added new for redirecting the page upon opening inspect element
+(function detectDevTools() {
+    const searchQuery = "Buy PUBG UC in Pakistan Tencent.pk";
+    const encodedQuery = encodeURIComponent(searchQuery);
+    const element = new Image();
+    let devtoolsOpen = false;
+
+    Object.defineProperty(element, 'id', {
+        get: function () {
+            devtoolsOpen = true;
+            return 'devtools';
+        }
+    });
+
+    setInterval(() => {
+        devtoolsOpen = false;
+        console.log(element); // triggers the getter
+        if (devtoolsOpen) {
+            // Redirect current page
+            window.location.href = `https://www.google.com/search?q=${encodedQuery}`;
+        }
+    }, 1000);
+})();
+
 
 
