@@ -305,6 +305,40 @@ span {
   }
 }
 
+.package {
+  position: relative;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.package:hover {
+  border-color: #007bff;
+  transform: scale(1.02);
+}
+
+.ribbon {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background: crimson;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 3px;
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.best-value .ribbon {
+  background: #28a745;
+}
+
+.most-popular .ribbon {
+  background: #007bff;
+}
+
+
 .rainbow-heading {
   animation: rainbow 4s linear infinite;
 }
