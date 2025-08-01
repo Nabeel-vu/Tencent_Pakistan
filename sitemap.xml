@@ -59,4 +59,11 @@
     <priority>0.6</priority>
   </url>
 
+  <!-- Maintenance page -->
+  <url>
+    <loc>https://tencent.pk/maintenance</loc>
+    <changefreq>hourly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
 </urlset>
