@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     crossorigin="anonymous">
   <link rel="stylesheet" href="style.min.css" media="print" onload="this.media='all';">
-  <link rel="stylesheet" href="containers.min.css" media="print" onload="this.media='all';">
   <script src="script.min.js" defer></script>
   <script src="structuredData.min.js" defer></script>
 
@@ -58,7 +57,55 @@
   <link rel="alternate" hreflang="ur" href="https://tencent.pk/ur/" />
   <link rel="canonical" href="https://tencent.pk" />
   <link rel="sitemap" type="application/xml" title="Sitemap" href="https://tencent.pk/sitemap.xml" />
+  <style>
+    .language-switcher {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      background-color: #f1f1f1;
+      border-radius: 20px;
+      padding: 5px 12px;
+      font-size: 14px;
+      font-weight: bold;
+      z-index: 9999;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
 
+    .language-switcher a {
+      text-decoration: none;
+      color: #000;
+      transition: color 0.3s ease;
+    }
+
+    .language-switcher a:hover {
+      color: #007bff;
+    }
+
+    .language-switcher .flag {
+      width: 20px;
+      height: 14px;
+      margin-right: 4px;
+      border-radius: 2px;
+      vertical-align: middle;
+    }
+
+    .language-switcher .divider {
+      display: inline-block;
+      width: 1px;
+      height: 18px;
+      background-color: #ccc;
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+
+    .trustpilot-widget-container {
+      margin-top: 50px;
+      /* or more if needed */
+    }
+  </style>
 
 </head>
 
@@ -150,6 +197,37 @@
       </div>
     </div>
 
+    <!-- <div class="package" itemscope itemtype="http://schema.org/Offer" onclick="selectPackage(this)">
+      <h2 class="package-title">300 <span class="bonus">+25</span></h2>
+      <p class="package-image">
+        <picture>
+          <source srcset="/Assets/300.avif" type="image/avif">
+          <source srcset="/Assets/300.webp" type="image/webp">
+          <img src="/Assets/300.jpg" alt="300 uc pack" itemprop="image" loading="lazy">
+        </picture>
+      </p>
+      <div class="price-container">
+        <p class="package-old-price">1400</p>
+        <p class="package-price" itemprop="price"><strong>1350 PKR</strong></p>
+      </div>
+    </div> -->
+
+    <!-- <div class="package" itemscope itemtype="http://schema.org/Offer" onclick="selectPackage(this)">
+      <h2 class="package-title">600 <span class="bonus">+60</span></h2>
+      <p class="package-image">
+        <picture>
+          <source srcset="/Assets/600.avif" type="image/avif">
+          <source srcset="/Assets/600.webp" type="image/webp">
+          <img src="/Assets/600.jpg" alt="600 uc pack" itemprop="image" loading="lazy">
+        </picture>
+      </p>
+
+      <div class="price-container">
+        <p class="package-old-price">2800</p>
+        <p class="package-price" itemprop="price"><strong>2700 PKR</strong></p>
+      </div>
+    </div> -->
+
     <div class="package" itemscope itemtype="http://schema.org/Offer" onclick="selectPackage(this)">
       <h2 class="package-title">1500 <span class="bonus">+300</span></h2>
       <p class="package-image">
@@ -207,7 +285,21 @@
       <i class="fab fa-whatsapp"></i> Buy Now
     </button>
   </div>
+  <!-- Load the script only once -->
+  <script>
+    window.onload = function () {
+      var adScript1 = document.createElement("script");
+      adScript1.src = "//pl20185899.highwaycpmrevenue.com/f104e2f9ec271ac1d51b6010a9a26e7a/invoke.js";
+      adScript1.async = true;
+      document.body.appendChild(adScript1);
 
+      var adScript2 = document.createElement("script");
+      adScript2.src = "//pl20185908.highratecpm.com/ab/48/0f/ab480f3e953bef2663d217fc7ee62d4e.js";
+      adScript2.async = true;
+      document.body.appendChild(adScript2);
+    };
+  </script>
+  <div id="container-f104e2f9ec271ac1d51b6010a9a26e7a"></div>
 
   <!-- <div class="warning-message" id="warning-msg"></div> -->
   <h3>Why Choose Tencent.pk?</h3>
@@ -233,79 +325,7 @@
         loading="lazy" />
     </a>
   </div>
-  <div class="page-layout">
-    <aside class="left-ad">
-      <!-- Ad code -->
-      <script type="text/javascript">
-        atOptions = {
-          'key': '0df61280a7a376f21d5658525c94f85e',
-          'format': 'iframe',
-          'height': 600,
-          'width': 160,
-          'params': {}
-        };
-      </script>
-      <script type="text/javascript"
-        src="//www.highperformanceformat.com/0df61280a7a376f21d5658525c94f85e/invoke.js"></script>
-    </aside>
 
-    <div class="main-container">
-      <!-- Your announcements section -->
-      <!-- Blog Section -->
-      <section class="blog-section">
-        <h2>Latest PUBG Mobile Announcements</h2>
-        <div class="blog-posts" id="blog-posts-container">
-          <!-- PUBG Mobile announcements will be loaded here dynamically -->
-        </div>
-
-
-      </section>
-    </div>
-
-
-
-
-    <aside class="right-ad">
-      <!-- Ad code -->
-      <script type="text/javascript">
-        atOptions = {
-          'key': '0df61280a7a376f21d5658525c94f85e',
-          'format': 'iframe',
-          'height': 600,
-          'width': 160,
-          'params': {}
-        };
-      </script>
-      <script type="text/javascript"
-        src="//www.highperformanceformat.com/0df61280a7a376f21d5658525c94f85e/invoke.js"></script>
-    </aside>
-  </div>
-  <!-- iframe viewer -->
-  <div id="iframe-container" style="margin-top:20px; display:none;">
-    <div style="display:flex; justify-content:space-between; align-items:center;">
-      <h3>Announcement Details</h3>
-      <button onclick="closeIframe()" style="padding:5px 10px; cursor:pointer;">Close</button>
-    </div>
-    <iframe id="announcement-iframe"
-      style="width:100%; height:600px; border:1px solid #ccc; border-radius:5px;"></iframe>
-  </div>
-
-
-  <!-- Load the script only once -->
-  <script>
-    window.onload = function () {
-      var adScript1 = document.createElement("script");
-      adScript1.src = "//pl20185899.highwaycpmrevenue.com/f104e2f9ec271ac1d51b6010a9a26e7a/invoke.js";
-      adScript1.async = true;
-      document.body.appendChild(adScript1);
-
-      var adScript2 = document.createElement("script");
-      adScript2.src = "//pl20185908.highratecpm.com/ab/48/0f/ab480f3e953bef2663d217fc7ee62d4e.js";
-      adScript2.async = true;
-      document.body.appendChild(adScript2);
-    };
-  </script>
-  <div id="container-f104e2f9ec271ac1d51b6010a9a26e7a"></div>
 </body>
 <footer class="footer">
   <div class="footer-container">

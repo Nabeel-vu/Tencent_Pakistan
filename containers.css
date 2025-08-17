@@ -1,0 +1,193 @@
+.language-switcher {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 9999;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.language-switcher a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+.language-switcher a:hover {
+    color: #007bff;
+}
+
+.language-switcher .flag {
+    width: 20px;
+    height: 14px;
+    margin-right: 4px;
+    border-radius: 2px;
+    vertical-align: middle;
+}
+
+.language-switcher .divider {
+    display: inline-block;
+    width: 1px;
+    height: 18px;
+    background-color: #ccc;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+.trustpilot-widget-container {
+    margin-top: 50px;
+    /* or more if needed */
+}
+
+/* Blog Section Styles */
+.blog-section {
+    padding: 40px 20px;
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+}
+
+.page-layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* keeps ads + blog aligned at the top */
+    gap: 20px;
+    max-width: 1400px;
+    /* allow some space for ads */
+    margin: 0 auto;
+    /* center entire layout */
+    padding: 0 10px;
+}
+
+
+.blog-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ffcc00;
+}
+
+.blog-posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* always 3 columns on large screens */
+    gap: 30px;
+    max-width: 1000px;
+    /* keeps content centered */
+    margin: 0 auto;
+    /* center horizontally */
+}
+
+/* Tablet view */
+@media (max-width: 900px) {
+    .blog-posts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+    .blog-posts {
+        grid-template-columns: 1fr;
+    }
+}
+
+.main-container {
+    max-width: 1000px;
+    /* keeps content centered */
+    margin: 0 auto;
+    /* auto-centers horizontally */
+    padding: 0 15px;
+}
+
+
+@media (max-width: 1024px) {
+    .sidebar-ad {
+        display: none;
+        /* hide ads on tablets/phones */
+    }
+}
+
+.sidebar-ad {
+    display: block;
+    width: 160px;
+    /* or 300px depending on banner size */
+    flex-shrink: 0;
+}
+
+.blog-post {
+    background-color: #262626;
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px #ffcc00;
+}
+
+.blog-post h3 {
+    margin-top: 0;
+    color: #ffcc00;
+    font-size: 22px;
+}
+
+.blog-post p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.blog-post a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.blog-post a:hover {
+    text-decoration: underline;
+}
+
+.announcement-card {
+    background-color: #262626;
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.announcement-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px #ffcc00;
+}
+
+.announcement-card h3 {
+    margin-top: 0;
+    color: #ffcc00;
+    font-size: 22px;
+}
+
+.announcement-card h3 a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.announcement-card h3 a:hover {
+    text-decoration: underline;
+}
+
+.announcement-card img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
