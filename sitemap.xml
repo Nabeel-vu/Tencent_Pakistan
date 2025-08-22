@@ -1,15 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- Homepage: EN + UR alternate -->
+  <!-- Homepage -->
   <url>
     <loc>https://tencent.pk/</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://tencent.pk/" />
-    <xhtml:link rel="alternate" hreflang="ur" href="https://tencent.pk/ur/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tencent.pk/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://tencent.pk/ur/"/>
   </url>
 
   <!-- Urdu homepage -->
@@ -17,53 +15,37 @@
     <loc>https://tencent.pk/ur/</loc>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ur" href="https://tencent.pk/ur/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://tencent.pk/" />
+    <xhtml:link rel="alternate" hreflang="ur" href="https://tencent.pk/ur/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tencent.pk/"/>
   </url>
 
-  <!-- Optional www version (lower priority) -->
-  <url>
-    <loc>https://www.tencent.pk/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
+  <!-- ❌ Remove www.tencent.pk (since you 301 it) -->
 
-  <!-- Support pages (EN only for now) -->
-  <!-- <url>
-    <loc>https://tencent.pk/similarweb</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url> -->
-
+  <!-- Terms -->
   <url>
     <loc>https://tencent.pk/static_page/terms/clean-tencent-terms-of-use</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
+  <!-- Privacy -->
   <url>
     <loc>https://tencent.pk/static_page/privacy/tencent-pp-as-of-25-aug-2023</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
+  <!-- How to buy -->
   <url>
     <loc>https://tencent.pk/static_page/how-to-buy</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- <url>
-    <loc>https://tencent.pk/bitly</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url> -->
-
-  <!-- Maintenance page -->
+  <!-- Maintenance -->
   <url>
     <loc>https://tencent.pk/maintenance</loc>
     <changefreq>hourly</changefreq>
     <priority>0.4</priority>
   </url>
-
 </urlset>

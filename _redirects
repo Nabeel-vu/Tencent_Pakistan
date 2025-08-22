@@ -1,8 +1,12 @@
-/similarweb https://www.similarweb.com/website/tencent.pk/
-/bitly https://bit.ly/PubgPkUC
-/trustpilot https://www.trustpilot.com/review/tencent.pk?utm_medium=trustbox&utm_source=MicroReviewCount
+# Pretty link redirects
+/similarweb   https://www.similarweb.com/website/tencent.pk/   301
+/bitly        https://bit.ly/PubgPkUC   301
+/trustpilot   https://www.trustpilot.com/review/tencent.pk?utm_medium=trustbox&utm_source=MicroReviewCount   301
+
+# Force non-www + HTTPS
 https://www.tencent.pk/*   https://tencent.pk/:splat   301!
 http://tencent.pk/*        https://tencent.pk/:splat   301!
 http://www.tencent.pk/*    https://tencent.pk/:splat   301!
-/ur    /ur/index.html    200
-/ur/   /ur/index.html    200
+
+# Urdu page – no need to map index.html
+/ur    /ur/   301
