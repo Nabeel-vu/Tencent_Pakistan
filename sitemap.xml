@@ -29,11 +29,11 @@
   </url>
 
   <!-- Support pages (EN only for now) -->
-  <url>
+  <!-- <url>
     <loc>https://tencent.pk/similarweb</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-  </url>
+  </url> -->
 
   <url>
     <loc>https://tencent.pk/static_page/terms/clean-tencent-terms-of-use</loc>
@@ -53,11 +53,11 @@
     <priority>0.7</priority>
   </url>
 
-  <url>
+  <!-- <url>
     <loc>https://tencent.pk/bitly</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-  </url>
+  </url> -->
 
   <!-- Maintenance page -->
   <url>
