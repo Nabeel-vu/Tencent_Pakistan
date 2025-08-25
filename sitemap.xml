@@ -35,15 +35,8 @@
 
   <!-- How to buy -->
   <url>
-    <loc>https://tencent.pk/static_page/how-to-buy</loc>
+    <loc>https://tencent.pk/static_page/how-to-buy/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-  </url>
-
-  <!-- Maintenance -->
-  <url>
-    <loc>https://tencent.pk/maintenance</loc>
-    <changefreq>hourly</changefreq>
-    <priority>0.4</priority>
   </url>
 </urlset>
