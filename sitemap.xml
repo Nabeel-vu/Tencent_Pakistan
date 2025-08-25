@@ -21,21 +21,21 @@
 
   <!-- Terms -->
   <url>
-    <loc>https://tencent.pk/static_page/terms/</loc>
+    <loc>https://tencent.pk/static-page/terms/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <!-- Privacy -->
   <url>
-    <loc>https://tencent.pk/static_page/privacy/</loc>
+    <loc>https://tencent.pk/static-page/privacy/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <!-- How to buy -->
   <url>
-    <loc>https://tencent.pk/static_page/how-to-buy/</loc>
+    <loc>https://tencent.pk/static-page/how-to-buy/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
