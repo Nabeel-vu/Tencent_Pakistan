@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
@@ -10,7 +11,7 @@
     <xhtml:link rel="alternate" hreflang="ur" href="https://tencent.pk/ur/"/>
   </url>
 
-  <!-- Urdu homepage -->
+  <!-- Urdu Homepage -->
   <url>
     <loc>https://tencent.pk/ur/</loc>
     <changefreq>daily</changefreq>
@@ -33,10 +34,18 @@
     <priority>0.5</priority>
   </url>
 
-  <!-- How to buy -->
+  <!-- How to Buy -->
   <url>
     <loc>https://tencent.pk/static-page/how-to-buy/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- News Page -->
+  <url>
+    <loc>https://tencent.pk/news/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
