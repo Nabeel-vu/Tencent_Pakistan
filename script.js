@@ -164,13 +164,21 @@ async function fetchPubgAnnouncements() {
                 //     });
                 // }
                 // Card click event
+                // if (linkUrl) {
+                //     card.addEventListener('click', () => {
+                //         window.location.href = `/news/?url=${encodeURIComponent(linkUrl)}&title=${encodeURIComponent(announcement.title)}&date=${encodeURIComponent(announcement.createTime)}`;
+                //     });
+                // }
                 if (linkUrl) {
-                    card.addEventListener('click', () => {
-                        window.location.href = `/news/?url=${encodeURIComponent(linkUrl)}&title=${encodeURIComponent(announcement.title)}&date=${encodeURIComponent(announcement.createTime)}`;
+                    card.addEventListener("click", () => {
+                        const targetUrl = "/news/?url=" + encodeURIComponent(linkUrl) +
+                            "&title=" + encodeURIComponent(announcement.title) +
+                            "&date=" + encodeURIComponent(announcement.createTime);
+                
+                        window.location.href = targetUrl;
                     });
                 }
-
-
+                
                 // Title
                 const titleElement = document.createElement('h3');
                 titleElement.textContent = announcement.title;
