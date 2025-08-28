@@ -163,12 +163,12 @@ async function fetchPubgAnnouncements() {
                 //         iframe.scrollIntoView({ behavior: "smooth" });
                 //     });
                 // }
-// Card click event
-if (linkUrl) {
-    card.addEventListener('click', () => {
-        window.location.href = `/news/?url=${encodeURIComponent(linkUrl)}&title=${encodeURIComponent(announcement.title)}&date=${encodeURIComponent(announcement.createTime)}`;
-    });
-}
+                // Card click event
+                if (linkUrl) {
+                    card.addEventListener('click', () => {
+                        window.location.href = `/news/?url=${encodeURIComponent(linkUrl)}&title=${encodeURIComponent(announcement.title)}&date=${encodeURIComponent(announcement.createTime)}`;
+                    });
+                }
 
 
                 // Title
