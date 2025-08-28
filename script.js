@@ -169,15 +169,18 @@ async function fetchPubgAnnouncements() {
                 //         window.location.href = `/news/?url=${encodeURIComponent(linkUrl)}&title=${encodeURIComponent(announcement.title)}&date=${encodeURIComponent(announcement.createTime)}`;
                 //     });
                 // }
-                if (linkUrl) {
-                    card.addEventListener("click", () => {
-                        const targetUrl = "/news/?url=" + encodeURIComponent(linkUrl) +
-                            "&title=" + encodeURIComponent(announcement.title) +
-                            "&date=" + encodeURIComponent(announcement.createTime);
-                
-                        window.location.href = targetUrl;
-                    });
-                }
+                /* keep announcement and linkUrl safe from minifier */
+void linkUrl;
+void announcement;
+
+if (linkUrl) {
+    card.addEventListener("click", function () {
+        window.location.href = "/news/?url=" + encodeURIComponent(linkUrl) +
+            "&title=" + encodeURIComponent(announcement.title) +
+            "&date=" + encodeURIComponent(announcement.createTime);
+    });
+}
+
                 
                 // Title
                 const titleElement = document.createElement('h3');
