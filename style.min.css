@@ -53,7 +53,7 @@ span {
 .package {
   width: 100%;
   max-width: 240px;
-  min-height: 336px;
+  min-height: 312px;
   padding: 16px 14px 14px;
   border: 1px solid rgba(255, 204, 0, 0.26);
   border-radius: 20px;
@@ -63,10 +63,11 @@ span {
     linear-gradient(180deg, #2c2c2c 0%, #1d1d1d 100%);
   box-shadow: 0 14px 32px rgba(0, 0, 0, 0.24);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  align-content: center;
+  justify-items: center;
+  gap: 10px;
 }
 
 @media (max-width: 600px) {
@@ -80,7 +81,7 @@ span {
   .package {
     width: auto;
     max-width: none;
-    min-height: 292px;
+    min-height: 272px;
     padding: 14px 12px 12px;
   }
 }
@@ -88,7 +89,7 @@ span {
 @media (max-width: 400px) {
   .package {
     width: auto;
-    min-height: 268px;
+    min-height: 248px;
     padding: 12px 10px 10px;
   }
 }
@@ -109,7 +110,7 @@ span {
   flex-wrap: wrap;
   gap: 4px;
   line-height: 1;
-  min-height: 62px;
+  min-height: 0;
   color: #fff4c2;
   letter-spacing: -0.03em;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.24);
@@ -132,21 +133,12 @@ span {
 }
 
 .package p {
-  margin-top: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
   position: relative;
   z-index: 1;
-}
-
-.package-title::after {
-  content: "UC Package";
   width: 100%;
-  display: block;
-  margin-top: 6px;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.68);
+  text-align: center;
 }
 
 .package-title .bonus {
@@ -177,17 +169,25 @@ span {
 }
 
 .price-container {
-  margin-top: auto;
-  padding: 12px 10px 10px;
-  border-radius: 14px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 0;
+  justify-self: center;
+  width: auto;
+  min-width: 0;
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  text-align: center;
 }
 
 @media (max-width: 600px) {
   .package-title {
     font-size: 22px;
-    min-height: 56px;
+    min-height: 0;
   }
 
   .package-price {
@@ -203,44 +203,76 @@ span {
   }
 
   .package-image {
-    min-height: 110px;
-    margin-top: 8px;
+    min-height: 96px;
+    margin-top: 6px;
   }
 
   .price-container {
-    padding: 10px 8px 8px;
-    border-radius: 12px;
+    gap: 3px;
   }
 
   .ribbon {
-    top: 8px;
-    left: 8px;
-    padding: 4px 8px;
-    font-size: 10px;
+    top: 10px;
+    left: -34px;
+    width: 112px;
+    padding: 4px 0;
+    font-size: 8px;
+    letter-spacing: 0.06em;
+  }
+
+  .most-popular .ribbon {
+    width: 124px;
+    left: -40px;
+    font-size: 7px;
+    letter-spacing: 0.04em;
   }
 }
 
 @media (max-width: 400px) {
+  .package {
+    min-height: 232px;
+  }
+
   .package-title {
-    font-size: 20px;
-    min-height: 52px;
+    font-size: 18px;
+    min-height: 0;
   }
 
   .package img {
-    max-width: 92px;
+    max-width: 84px;
   }
 
   .package-image {
-    min-height: 92px;
-  }
-
-  .package-title::after {
-    font-size: 10px;
+    min-height: 80px;
   }
 
   .package-title .bonus {
     padding: 3px 7px;
     font-size: 11px;
+  }
+
+  .package-price {
+    font-size: 17px;
+  }
+
+  .package-old-price {
+    font-size: 11px;
+  }
+
+  .ribbon {
+    top: 9px;
+    left: -31px;
+    width: 102px;
+    padding: 4px 0;
+    font-size: 7px;
+    letter-spacing: 0.04em;
+  }
+
+  .most-popular .ribbon {
+    width: 112px;
+    left: -35px;
+    font-size: 6px;
+    letter-spacing: 0.03em;
   }
 }
 
@@ -250,11 +282,12 @@ span {
   color: #ffcc00;
   margin: 0;
   letter-spacing: -0.03em;
+  line-height: 1.05;
 }
 
 .package-old-price {
   text-decoration: line-through;
-  margin: 0 0 6px;
+  margin: 0;
   color: rgba(255, 255, 255, 0.42);
   font-size: 14px;
 }
@@ -416,16 +449,23 @@ span {
 
 .ribbon {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 14px;
+  left: -40px;
+  width: 140px;
   background: #dc143c;
   color: #fff;
-  padding: 5px 9px;
-  font-size: 11px;
+  padding: 6px 0;
+  font-size: 10px;
   font-weight: bold;
-  border-radius: 999px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 0;
   z-index: 2;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.24);
+  transform: rotate(-38deg);
+  transform-origin: center;
+  pointer-events: none;
 }
 
 .best-value .ribbon {
@@ -434,6 +474,10 @@ span {
 
 .most-popular .ribbon {
   background: #007bff;
+  width: 152px;
+  left: -46px;
+  font-size: 9px;
+  letter-spacing: 0.06em;
 }
 
 .rainbow-heading {
