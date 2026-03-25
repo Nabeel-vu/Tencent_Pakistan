@@ -2,7 +2,6 @@ import datetime as dt
 import hashlib
 import html
 import json
-import os
 import pathlib
 import re
 import urllib.request
@@ -237,10 +236,6 @@ def render_listing(items: list[dict]) -> str:
       margin-left: 0;
       margin-top: 10px;
     }}
-    .news-page .seo-note {{
-      color: #bbb;
-      font-size: 14px;
-    }}
   </style>
 </head>
 <body>
@@ -251,7 +246,6 @@ def render_listing(items: list[dict]) -> str:
       This page automatically republishes the latest official PUBG Mobile announcements into crawlable pages on Tencent.pk.
       Each article links back to its original official source.
     </p>
-    <p class="seo-note">Canonical URL: {BASE_URL}/news/</p>
     <section class="news-grid">
       {cards_html}
     </section>
@@ -287,19 +281,6 @@ def render_article(item: dict) -> str:
         },
         "description": item["summary"],
     }
-    related_html = ""
-    if item.get("related"):
-        links = []
-        for related in item["related"]:
-            links.append(
-                f'<li><a href="/news/{related["slug"]}/">{html.escape(related["title"])}</a> '
-                f'<span>({html.escape(related["date"])})</span></li>'
-            )
-        related_html = (
-            '<aside class="related-news"><h2>Related News</h2><ul>'
-            + "".join(links)
-            + "</ul></aside>"
-        )
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -357,33 +338,6 @@ def render_article(item: dict) -> str:
       flex-wrap: wrap;
       margin-bottom: 20px;
     }}
-    .article-meta {{
-      border-top: 1px solid #3a3a3a;
-      margin-top: 22px;
-      padding-top: 14px;
-      color: #bbb;
-      font-size: 14px;
-    }}
-    .related-news {{
-      margin-top: 28px;
-      padding-top: 18px;
-      border-top: 1px solid #3a3a3a;
-    }}
-    .related-news ul {{
-      margin: 0;
-      padding-left: 20px;
-    }}
-    .related-news li {{
-      margin-bottom: 10px;
-    }}
-    .related-news a {{
-      color: #ffcc00;
-    }}
-    .related-news span {{
-      color: #bbb;
-      font-size: 14px;
-      margin-left: 6px;
-    }}
   </style>
 </head>
 <body>
@@ -400,24 +354,12 @@ def render_article(item: dict) -> str:
       <div class="article-body">
         {item["content_html"]}
       </div>
-      {related_html}
-      <div class="article-meta">
-        <p>This article is automatically generated from an official PUBG Mobile announcement feed and links to the original source above.</p>
-        <p>Canonical: {BASE_URL}/news/{item['slug']}/</p>
-        <p>Robots: index,follow</p>
-      </div>
+      <p>This article is automatically generated from an official PUBG Mobile announcement feed and links to the original source above.</p>
     </article>
   </main>
 </body>
 </html>
 """
-
-
-def validate_rendered_page(rendered_html: str, canonical_url: str) -> None:
-    if '<meta name="robots" content="index,follow">' not in rendered_html:
-        raise RuntimeError(f"Missing robots meta for {canonical_url}")
-    if f'<link rel="canonical" href="{canonical_url}">' not in rendered_html:
-        raise RuntimeError(f"Missing canonical link for {canonical_url}")
 
 
 def write_sitemap(items: list[dict]) -> None:
@@ -482,20 +424,6 @@ def write_sitemap(items: list[dict]) -> None:
     (ROOT / "sitemap.xml").write_text("\n".join(lines), encoding="utf-8")
 
 
-def cleanup_old_news_dirs(valid_slugs: set[str]) -> None:
-    keep = {"index.html", "news-data.json"}
-    for child in NEWS_DIR.iterdir():
-        if child.name in keep:
-            continue
-        if child.is_dir() and child.name not in valid_slugs:
-            for root, dirs, files in os.walk(child, topdown=False):
-                for file_name in files:
-                    pathlib.Path(root, file_name).unlink(missing_ok=True)
-                for dir_name in dirs:
-                    pathlib.Path(root, dir_name).rmdir()
-            child.rmdir()
-
-
 def main() -> None:
     NEWS_DIR.mkdir(exist_ok=True)
     items = []
@@ -544,28 +472,12 @@ def main() -> None:
         json.dumps(items, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
-    listing_html = render_listing(items)
-    validate_rendered_page(listing_html, f"{BASE_URL}/news/")
-    (NEWS_DIR / "index.html").write_text(listing_html, encoding="utf-8")
+    (NEWS_DIR / "index.html").write_text(render_listing(items), encoding="utf-8")
 
-    valid_slugs = {item["slug"] for item in items}
-    cleanup_old_news_dirs(valid_slugs)
-
-    for index, item in enumerate(items):
-        item["related"] = [
-            {
-                "slug": related["slug"],
-                "title": related["title"],
-                "date": related["date"],
-            }
-            for related in items
-            if related["slug"] != item["slug"]
-        ][:3]
+    for item in items:
         article_dir = NEWS_DIR / item["slug"]
         article_dir.mkdir(exist_ok=True)
-        article_html = render_article(item)
-        validate_rendered_page(article_html, f"{BASE_URL}/news/{item['slug']}/")
-        (article_dir / "index.html").write_text(article_html, encoding="utf-8")
+        (article_dir / "index.html").write_text(render_article(item), encoding="utf-8")
 
     write_sitemap(items)
     print(f"Generated {len(items)} news article pages.")
