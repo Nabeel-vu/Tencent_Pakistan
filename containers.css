@@ -166,6 +166,17 @@
     min-height: 380px;
 }
 
+@media (max-width: 600px) {
+    .announcement-card {
+        min-height: auto;
+        padding: 16px;
+    }
+
+    .announcement-card h3 {
+        font-size: 20px;
+    }
+}
+
 .announcement-card:hover {
     transform: scale(1.03);
     box-shadow: 0 0 15px #ffcc00;
