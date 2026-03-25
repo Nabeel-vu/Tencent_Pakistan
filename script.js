@@ -78,20 +78,18 @@ function renderHomepageAnnouncements(items) {
 
         var link = document.createElement('a');
         link.href = '/news/' + item.slug + '/';
-        link.style.display = 'block';
-        link.style.color = 'inherit';
-        link.style.textDecoration = 'none';
 
         if (item.image) {
+            var media = document.createElement('div');
+            media.className = 'announcement-card-media';
             var image = document.createElement('img');
             image.src = item.image;
             image.alt = item.title;
             image.loading = 'lazy';
-            image.style.maxWidth = '90%';
-            image.style.height = 'auto';
-            image.style.borderRadius = '5px';
-            image.style.marginTop = '10px';
-            link.appendChild(image);
+            image.width = 1600;
+            image.height = 900;
+            media.appendChild(image);
+            link.appendChild(media);
         }
 
         var date = document.createElement('p');

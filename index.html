@@ -151,7 +151,7 @@
         <picture>
           <source srcset="/Assets/60.avif" type="image/avif">
           <source srcset="/Assets/60.webp" type="image/webp">
-          <img src="/Assets/60.webp" alt="60 uc Pack" itemprop="image" loading="lazy">
+          <img src="/Assets/60.webp" alt="60 uc Pack" itemprop="image" loading="lazy" width="240" height="240">
         </picture>
       </p>
       <div class="price-container">
@@ -167,7 +167,7 @@
         <picture>
           <source srcset="/Assets/300.avif" type="image/avif">
           <source srcset="/Assets/300.webp" type="image/webp">
-          <img src="/Assets/300.webp" alt="300 uc pack" itemprop="image" loading="lazy">
+          <img src="/Assets/300.webp" alt="300 uc pack" itemprop="image" loading="lazy" width="240" height="240">
         </picture>
       </p>
       <div class="price-container">
@@ -183,7 +183,7 @@
         <picture>
           <source srcset="/Assets/600.avif" type="image/avif">
           <source srcset="/Assets/600.webp" type="image/webp">
-          <img src="/Assets/600.webp" alt="600 uc pack" itemprop="image" loading="lazy">
+          <img src="/Assets/600.webp" alt="600 uc pack" itemprop="image" loading="lazy" width="240" height="240">
         </picture>
       </p>
       <div class="price-container">
@@ -198,7 +198,7 @@
         <picture>
           <source srcset="/Assets/1500.avif" type="image/avif">
           <source srcset="/Assets/1500.webp" type="image/webp">
-          <img src="/Assets/1500.webp" alt="1500 uc pack" itemprop="image" loading="lazy">
+          <img src="/Assets/1500.webp" alt="1500 uc pack" itemprop="image" loading="lazy" width="240" height="240">
         </picture>
       </p>
       <div class="price-container">
@@ -213,7 +213,7 @@
         <picture>
           <source srcset="/Assets/3000.avif" type="image/avif">
           <source srcset="/Assets/3000.webp" type="image/webp">
-          <img src="/Assets/3000.webp" alt="3000 uc pack" itemprop="image" loading="lazy">
+          <img src="/Assets/3000.webp" alt="3000 uc pack" itemprop="image" loading="lazy" width="240" height="240">
         </picture>
       </p>
       <div class="price-container">
@@ -228,7 +228,7 @@
         <picture>
           <source srcset="/Assets/6000.avif" type="image/avif">
           <source srcset="/Assets/6000.webp" type="image/webp">
-          <img src="/Assets/6000.webp" alt="6000 uc pack" itemprop="image" loading="lazy">
+          <img src="/Assets/6000.webp" alt="6000 uc pack" itemprop="image" loading="lazy" width="240" height="240">
         </picture>
       </p>
       <div class="price-container">
@@ -265,8 +265,31 @@
       <section class="blog-section">
         <h2>Latest PUBG Mobile Announcements</h2>
         <p>Read official PUBG Mobile updates through our SEO-friendly news pages.</p>
-        <div class="blog-posts" id="blog-posts-container">
-          <!-- PUBG Mobile announcements will be loaded here dynamically -->
+        <div class="blog-posts" id="blog-posts-container" aria-live="polite">
+          <article class="announcement-card announcement-card-skeleton" aria-hidden="true">
+            <div class="announcement-card-media skeleton-block"></div>
+            <div class="announcement-card-date skeleton-line skeleton-line-short"></div>
+            <div class="announcement-card-title skeleton-line"></div>
+            <div class="announcement-card-title skeleton-line skeleton-line-medium"></div>
+            <div class="announcement-card-summary skeleton-line"></div>
+            <div class="announcement-card-summary skeleton-line skeleton-line-medium"></div>
+          </article>
+          <article class="announcement-card announcement-card-skeleton" aria-hidden="true">
+            <div class="announcement-card-media skeleton-block"></div>
+            <div class="announcement-card-date skeleton-line skeleton-line-short"></div>
+            <div class="announcement-card-title skeleton-line"></div>
+            <div class="announcement-card-title skeleton-line skeleton-line-medium"></div>
+            <div class="announcement-card-summary skeleton-line"></div>
+            <div class="announcement-card-summary skeleton-line skeleton-line-medium"></div>
+          </article>
+          <article class="announcement-card announcement-card-skeleton" aria-hidden="true">
+            <div class="announcement-card-media skeleton-block"></div>
+            <div class="announcement-card-date skeleton-line skeleton-line-short"></div>
+            <div class="announcement-card-title skeleton-line"></div>
+            <div class="announcement-card-title skeleton-line skeleton-line-medium"></div>
+            <div class="announcement-card-summary skeleton-line"></div>
+            <div class="announcement-card-summary skeleton-line skeleton-line-medium"></div>
+          </article>
         </div>
       </section>
     </div>
