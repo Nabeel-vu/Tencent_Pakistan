@@ -53,13 +53,15 @@ span {
 .package {
   width: 100%;
   max-width: 240px;
-  min-height: 320px;
-  padding: 15px;
-  border: 1px solid rgba(255, 204, 0, 0.35);
-  border-radius: 16px;
+  min-height: 336px;
+  padding: 16px 14px 14px;
+  border: 1px solid rgba(255, 204, 0, 0.26);
+  border-radius: 20px;
   text-align: center;
-  background: linear-gradient(180deg, #2b2b2b 0%, #202020 100%);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+  background:
+    radial-gradient(circle at top, rgba(255, 214, 102, 0.12), transparent 34%),
+    linear-gradient(180deg, #2c2c2c 0%, #1d1d1d 100%);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.24);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   display: flex;
   flex-grow: 1;
@@ -78,34 +80,39 @@ span {
   .package {
     width: auto;
     max-width: none;
-    min-height: 280px;
-    padding: 12px;
+    min-height: 292px;
+    padding: 14px 12px 12px;
   }
 }
 
 @media (max-width: 400px) {
   .package {
     width: auto;
-    min-height: 250px;
-    padding: 10px;
+    min-height: 268px;
+    padding: 12px 10px 10px;
   }
 }
 
 .package:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.3);
-  border-color: rgba(255, 204, 0, 0.7);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 204, 0, 0.5);
 }
 
 .package-title {
-  font-size: 20px;
+  font-size: 28px;
+  font-weight: 800;
   margin-bottom: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 4px;
-  line-height: 1.15;
-  min-height: 48px;
+  line-height: 1;
+  min-height: 62px;
+  color: #fff4c2;
+  letter-spacing: -0.03em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.24);
 }
 
 .package-title img {
@@ -130,10 +137,31 @@ span {
   z-index: 1;
 }
 
+.package-title::after {
+  content: "UC Package";
+  width: 100%;
+  display: block;
+  margin-top: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.68);
+}
+
 .package-title .bonus {
-  font-size: 0.8em;
-  color: #ffd86b;
-  margin-left: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  border-radius: 999px;
+  margin-left: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  color: #131313;
+  background: linear-gradient(180deg, #ffe28a 0%, #ffbf3f 100%);
+  box-shadow: 0 8px 16px rgba(255, 191, 63, 0.24);
 }
 
 .package-image {
@@ -150,23 +178,24 @@ span {
 
 .price-container {
   margin-top: auto;
-  padding: 10px 10px 8px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.04);
+  padding: 12px 10px 10px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @media (max-width: 600px) {
   .package-title {
-    font-size: 18px;
-    min-height: 42px;
+    font-size: 22px;
+    min-height: 56px;
   }
 
   .package-price {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .package-old-price {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .package img {
@@ -179,8 +208,8 @@ span {
   }
 
   .price-container {
-    padding: 8px;
-    border-radius: 10px;
+    padding: 10px 8px 8px;
+    border-radius: 12px;
   }
 
   .ribbon {
@@ -193,8 +222,8 @@ span {
 
 @media (max-width: 400px) {
   .package-title {
-    font-size: 16px;
-    min-height: 38px;
+    font-size: 20px;
+    min-height: 52px;
   }
 
   .package img {
@@ -204,19 +233,30 @@ span {
   .package-image {
     min-height: 92px;
   }
+
+  .package-title::after {
+    font-size: 10px;
+  }
+
+  .package-title .bonus {
+    padding: 3px 7px;
+    font-size: 11px;
+  }
 }
 
 .package-price {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   color: #ffcc00;
   margin: 0;
+  letter-spacing: -0.03em;
 }
 
 .package-old-price {
   text-decoration: line-through;
-  margin: 0 0 4px;
-  color: #999;
+  margin: 0 0 6px;
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 14px;
 }
 
 .input-container {
@@ -311,7 +351,7 @@ span {
 
 .selected-package {
   border-color: #4CAF50 !important;
-  box-shadow: 0 0 0 1px rgba(76, 175, 80, 0.35), 0 16px 28px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 0 0 1px rgba(76, 175, 80, 0.35), 0 18px 32px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes rainbow {
@@ -359,6 +399,14 @@ span {
 .package {
   position: relative;
   overflow: hidden;
+}
+
+.package::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 36%);
+  pointer-events: none;
 }
 
 .package:hover {
