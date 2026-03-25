@@ -2,7 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- Homepage -->
   <url>
     <loc>https://tencent.pk/</loc>
     <changefreq>daily</changefreq>
@@ -11,7 +10,6 @@
     <xhtml:link rel="alternate" hreflang="ur" href="https://tencent.pk/ur/"/>
   </url>
 
-  <!-- Urdu Homepage -->
   <url>
     <loc>https://tencent.pk/ur/</loc>
     <changefreq>daily</changefreq>
@@ -20,32 +18,100 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://tencent.pk/"/>
   </url>
 
-  <!-- Terms -->
   <url>
     <loc>https://tencent.pk/static-page/terms/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
-  <!-- Privacy -->
   <url>
     <loc>https://tencent.pk/static-page/privacy/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
-  <!-- How to Buy -->
   <url>
     <loc>https://tencent.pk/static-page/how-to-buy/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- News Page -->
   <url>
     <loc>https://tencent.pk/news/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://tencent.pk/news/2026-03-17-version-4-3-official-verification-and-title-recipients/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://tencent.pk/news/2026-03-11-v4-3-update-announcement/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://tencent.pk/news/2026-02-12-v4-3-beta-test-3-update-announcement/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://tencent.pk/news/2026-02-04-skyhigh-spectacle-themed-mode-return-announcement/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://tencent.pk/news/2026-01-29-v4-3-beta-test-1-update-announcement/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://tencent.pk/news/2026-01-09-qr-code-authorized-login-faq/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://tencent.pk/news/2026-01-08-version-4-2-official-verification-and-title-recipients/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://tencent.pk/news/2026-01-06-v4-2-update-announcement/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://tencent.pk/news/2025-12-29-get-the-metro-royale-wallpaper/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://tencent.pk/news/2025-12-20-v4-2-beta-test-3-update-announcement/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://tencent.pk/news/2025-12-12-v4-2-beta-test-2-update-announcement/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://tencent.pk/news/2025-12-05-v4-2-beta-1-update-announcement/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>

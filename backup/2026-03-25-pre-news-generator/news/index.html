@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PUBG Mobile News in Pakistan | Tencent PK</title>
+  <meta name="description" content="Read the latest PUBG Mobile news and announcements in Pakistan. Get updates, top-ups, and tips from Tencent PK.">
+  <link rel="canonical" href="https://tencent.pk/news/" />
+
+  <meta property="og:title" content="PUBG Mobile News in Pakistan | Tencent PK" />
+  <meta property="og:description" content="Read the latest PUBG Mobile news and announcements in Pakistan. Get updates, top-ups, and tips from Tencent PK." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tencent.pk/news/" />
+  <meta property="og:image" content="https://tencent.pk/static/images/Tencent-logo.webp" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PUBG Mobile News in Pakistan | Tencent PK" />
+  <meta name="twitter:description" content="Read the latest PUBG Mobile news and announcements in Pakistan. Get updates, top-ups, and tips from Tencent PK." />
+  <meta name="twitter:image" content="https://tencent.pk/static/images/Tencent-logo.webp" />
+
+  <link rel="stylesheet" href="../style.min.css" />
+  <link rel="stylesheet" href="../containers.min.css" />
+  <script src="../script.min.js" defer></script>
+
+  <style>
+    .title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      gap: 10px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      padding: 8px 14px;
+      background: #ffcc00;
+      color: #1a1a1a;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: opacity 0.2s ease-in-out;
+      border: 2px solid #ffcc00;
+      white-space: nowrap;
+    }
+
+    .back-btn:hover {
+      opacity: 0.9;
+    }
+
+    .selected-news {
+      background: #262626;
+      border: 1px solid #444;
+      border-radius: 10px;
+      padding: 18px;
+      margin-bottom: 20px;
+    }
+
+    .selected-news img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto 15px;
+      border-radius: 8px;
+    }
+
+    .news-date {
+      color: #777;
+      font-size: 14px;
+      margin: -5px 0 12px 0;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+
+    .news-summary {
+      color: #ddd;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body data-page="news">
+  <section class="blog-section">
+    <h1>PUBG Mobile News in Pakistan</h1>
+    <div class="title-row">
+      <h2 id="news-title">Announcement Details</h2>
+      <a href="/" class="back-btn">← Back to Home</a>
+    </div>
+    <p id="news-date" class="news-date"></p>
+    <div id="selected-news" class="selected-news">
+      <img id="news-image" src="" alt="" hidden>
+      <p id="news-summary" class="news-summary">Select an announcement to view the latest details and open the official post.</p>
+      <a id="official-news-link" href="https://www.pubgmobile.com/en-US/news.shtml" class="back-btn" target="_blank" rel="noopener noreferrer" hidden>Read Official Announcement</a>
+    </div>
+  </section>
+
+  <div class="page-layout">
+    <div class="main-container">
+      <section class="blog-section">
+        <h2>Other Announcements</h2>
+        <div class="blog-posts" id="blog-posts-container"></div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
+
