@@ -30,14 +30,14 @@ const structuredDataWebsite = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Tencent PK",
-    "url": "https://tencent.pk",
-    "description": "Your ultimate destination to buy PUBG UC in Pakistan using EasyPaisa & JazzCash securely.",
+    "url": "https://tencent.pk/",
+    "description": "Buy PUBG UC in Pakistan with EasyPaisa, JazzCash, Raast, and bank transfer. View prices, payment options, and PUBG Mobile updates on Tencent.pk.",
     "publisher": {
       "@type": "Organization",
       "name": "Tencent PK",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://tencent.pk/logo.webp"
+        "url": "https://tencent.pk/static/images/Tencent-logo.webp"
       }
     }
   };
@@ -46,9 +46,9 @@ const structuredDataWebsite = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Tencent PK",
-    "url": "https://tencent.pk",
-    "image": "https://tencent.pk/logo.webp",
-    "logo": "https://tencent.pk/logo.webp",
+    "url": "https://tencent.pk/",
+    "image": "https://tencent.pk/static/images/Tencent-logo.webp",
+    "logo": "https://tencent.pk/static/images/Tencent-logo.webp",
     "description": "Buy PUBG UC in Pakistan with instant delivery and secure payments via EasyPaisa, JazzCash, Raast, and bank transfer.",
     "telephone": "+923023336555",
     "email": "support@tencent.pk",
@@ -67,6 +67,29 @@ const structuredDataWebsite = {
     ]
   };
 
+  const structuredDataCollectionPage = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Buy PUBG UC in Pakistan",
+    "url": "https://tencent.pk/",
+    "description": "PUBG UC package pricing, local payment methods, and PUBG Mobile update coverage for Pakistan.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Tencent PK",
+      "url": "https://tencent.pk/"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "PUBG UC"
+      },
+      {
+        "@type": "Thing",
+        "name": "PUBG Mobile"
+      }
+    ]
+  };
+
   function insertStructuredData(data) {
     const script = document.createElement('script');
     script.type = "application/ld+json";
@@ -77,4 +100,5 @@ const structuredDataWebsite = {
   document.addEventListener("DOMContentLoaded", function() {
     insertStructuredData(structuredDataWebsite);
     insertStructuredData(structuredDataOrganization);
+    insertStructuredData(structuredDataCollectionPage);
   });
