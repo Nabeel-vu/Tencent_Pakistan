@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PUBG Mobile News in Pakistan | Tencent PK</title>
+  <meta name="description" content="Read the latest PUBG Mobile news and announcements in Pakistan. Get updates, top-ups, and tips from Tencent PK.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="PUBG Mobile News in Pakistan | Tencent PK" />
+  <meta property="og:description" content="Read the latest PUBG Mobile news and announcements in Pakistan. Get updates, top-ups, and tips from Tencent PK." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tencent.pk/news/" />
+  <meta property="og:image" content="https://tencent.pk/static/images/Tencent-logo.webp" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PUBG Mobile News in Pakistan | Tencent PK" />
+  <meta name="twitter:description" content="Read the latest PUBG Mobile news and announcements in Pakistan. Get updates, top-ups, and tips from Tencent PK." />
+  <meta name="twitter:image" content="https://tencent.pk/static/images/Tencent-logo.webp" />
+  <!-- External Styles -->
+  <link rel="stylesheet" href="../style.min.css" />
+  <link rel="stylesheet" href="../containers.min.css" />
+
+  <!-- Shared JS -->
+  <script src="../script.min.js" defer></script>
+
+  <style>
+    /* Layout */
+    .title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      gap: 10px;
+    }
+
+    /* Back button styling */
+    .back-btn {
+      display: inline-block;
+      padding: 8px 14px;
+      background: #ffcc00;
+      color: #1a1a1a;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: opacity 0.2s ease-in-out;
+      border: 2px solid #ffcc00;
+      white-space: nowrap; /* prevent wrapping */
+    }
+    .back-btn:hover {
+      opacity: 0.9;
+    }
+
+    /* Disable hover effects for the selected news card */
+    .no-hover:hover {
+      transform: none !important;
+      box-shadow: none !important;
+      cursor: default !important;
+    }
+
+    /* Iframe styling */
+    .news-iframe {
+  width: 100%;
+  height: 70vh;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 10px;
+  background: #fff;
+  display: none; /* hidden by default */
+}
+
+
+    .news-date {
+      color: #777;
+      font-size: 14px;
+      margin: -5px 0 12px 0;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Main News Section -->
+  <section class="blog-section">
+      <!-- Page H1 -->
+  <h1>PUBG Mobile News in Pakistan</h1>
+    <!-- Title + Back to Home in one row -->
+    <div class="title-row">
+      <h2 id="news-title">Announcement Details</h2>
+      <a href="/" class="back-btn">← Back to Home</a>
+    </div>
+    <p id="news-date" class="news-date"></p>
+
+    <!-- Iframe inside card with no hover -->
+    <div>
+      <iframe id="news-iframe" class="news-iframe" src="" loading="lazy" style="display:none;"></iframe>
+    </div>
+  </section>
+
+  <!-- Page Layout -->
+  <div class="page-layout">
+    <!-- Left Ad -->
+    <aside class="left-ad">
+      <script type="text/javascript">
+        atOptions = {
+          'key': '0df61280a7a376f21d5658525c94f85e',
+          'format': 'iframe',
+          'height': 600,
+          'width': 160,
+          'params': {}
+        };
+      </script>
+      <script type="text/javascript"
+        src="//www.highperformanceformat.com/0df61280a7a376f21d5658525c94f85e/invoke.js"></script>
+    </aside>
+
+    <!-- Center Content -->
+    <div class="main-container">
+      <!-- Other Announcements -->
+      <section class="blog-section">
+        <h2>Other Announcements</h2>
+        <div class="blog-posts" id="blog-posts-container">
+          <!-- Filled by script.js -->
+        </div>
+      </section>
+    </div>
+
+    <!-- Right Ad -->
+    <aside class="right-ad">
+      <script type="text/javascript">
+        atOptions = {
+          'key': '0df61280a7a376f21d5658525c94f85e',
+          'format': 'iframe',
+          'height': 600,
+          'width': 160,
+          'params': {}
+        };
+      </script>
+      <script type="text/javascript"
+        src="//www.highperformanceformat.com/0df61280a7a376f21d5658525c94f85e/invoke.js"></script>
+    </aside>
+  </div>
+
+  <!-- Init script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const params = new URLSearchParams(window.location.search);
+      const rawUrl = params.get('url');
+      const rawTitle = params.get('title');
+      const rawDate = params.get('date');
+  
+      const title = rawTitle ? decodeURIComponent(rawTitle) : 'Announcement Details';
+      const dateStr = rawDate ? new Date(decodeURIComponent(rawDate)).toISOString().split('T')[0] : '';
+      const url = rawUrl ? decodeURIComponent(rawUrl) : '';
+  
+      document.getElementById('news-title').textContent = title;
+      if (dateStr) document.getElementById('news-date').textContent = dateStr;
+  
+      const iframe = document.getElementById('news-iframe');
+      if (url) {
+        iframe.src = url;
+        iframe.style.display = 'block'; // Show iframe only if a news URL exists
+      } else {
+        iframe.style.display = 'none'; // Hide iframe if no news
+      }
+    });
+  </script>
+</body>
+</html>

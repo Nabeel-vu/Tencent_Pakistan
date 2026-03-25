@@ -1,3 +1,29 @@
-/* 
+/*
   X-Robots-Tag: index, follow
-  Cache-Control: public, max-age=86400, must-revalidate
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  X-Frame-Options: SAMEORIGIN
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://widget.trustpilot.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' data: https:; font-src 'self' https://cdnjs.cloudflare.com; connect-src 'self' https://publicfaas.vasdgame.com https://www.google-analytics.com https://region1.google-analytics.com https://stats.g.doubleclick.net; frame-src 'self' https://widget.trustpilot.com https://www.trustpilot.com; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self' https://api.whatsapp.com; upgrade-insecure-requests
+  Cache-Control: public, max-age=0, must-revalidate
+
+/Assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.avif
+  Cache-Control: public, max-age=31536000, immutable
