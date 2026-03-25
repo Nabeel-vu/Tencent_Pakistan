@@ -19,58 +19,131 @@
   <link rel="stylesheet" href="/style.min.css">
   <link rel="stylesheet" href="/containers.min.css">
   <style>
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top, rgba(241, 181, 0, 0.14), transparent 32%),
+        linear-gradient(180deg, #131313 0%, #0c0c0c 100%);
+    }
     .news-page {
-      max-width: 1100px;
+      max-width: 1180px;
       margin: 0 auto;
-      padding: 30px 20px 50px;
+      padding: 34px 20px 64px;
+    }
+    .news-page > p:first-child {
+      margin-bottom: 26px;
+    }
+    .news-page > p:first-child .lnk-btn {
+      margin-left: 0;
+    }
+    .news-page h1 {
+      margin-bottom: 14px;
+      text-align: left;
     }
     .news-intro {
-      margin-bottom: 25px;
-      line-height: 1.7;
+      max-width: 760px;
+      margin: 0 0 16px;
+      color: #d5d5d5;
+      line-height: 1.8;
+    }
+    .news-page .seo-note {
+      color: #9e9e9e;
+      font-size: 14px;
+      margin: 0 0 28px;
     }
     .news-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      align-items: stretch;
     }
-    .news-card-link {
-      display: block;
+    .news-grid > .announcement-card {
+      background:
+        linear-gradient(180deg, rgba(45, 45, 45, 0.98) 0%, rgba(29, 29, 29, 0.98) 100%);
+      border: 1px solid rgba(255, 196, 0, 0.18);
+      border-radius: 18px;
+      padding: 16px 16px 20px;
+      min-height: 0;
+      overflow: hidden;
+      box-shadow: 0 20px 36px rgba(0, 0, 0, 0.28);
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .news-grid > .announcement-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 196, 0, 0.36);
+      box-shadow: 0 24px 42px rgba(0, 0, 0, 0.34);
+    }
+    .news-grid .news-card-link {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
       color: inherit;
       text-decoration: none;
     }
-    .announcement-card {
-      background: #262626;
-      border: 1px solid #3a3a3a;
+    .news-grid .news-card-media {
+      aspect-ratio: 16 / 9;
       border-radius: 12px;
-      padding: 18px;
-      height: 100%;
+      overflow: hidden;
+      background: #1c1c1c;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
     }
-    .announcement-card img {
+    .news-grid .announcement-card img {
       width: 100%;
-      height: auto;
-      border-radius: 8px;
-      margin-bottom: 12px;
+      height: 100%;
+      display: block;
+      object-fit: cover;
     }
-    .news-card-date {
-      color: #bbb;
+    .news-grid .news-card-date {
+      color: #bfbfbf;
       font-size: 13px;
-      margin: 0 0 8px;
+      margin: 0;
+      text-align: center;
     }
-    .announcement-card h2 {
-      font-size: 22px;
-      margin: 0 0 10px;
+    .news-grid .announcement-card h2 {
+      margin: 0;
+      color: #ffc400;
+      font-size: 18px;
+      line-height: 1.28;
+      text-align: center;
     }
-    .announcement-card p {
-      color: #ddd;
-      line-height: 1.6;
+    .news-grid .announcement-card > .news-card-link > p:last-of-type {
+      color: #d7d7d7;
+      line-height: 1.65;
+      margin: 0;
+      font-size: 15px;
+      text-align: center;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
-    .announcement-card .lnk-btn {
-      margin-left: 0;
-      margin-top: 10px;
+    .news-grid .announcement-card .lnk-btn {
+      margin: 8px auto 0;
     }
-    .news-page .seo-note {
-      color: #bbb;
-      font-size: 14px;
+    @media (max-width: 1024px) {
+      .news-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 768px) {
+      .news-page {
+        padding: 28px 16px 48px;
+      }
+      .news-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+      .news-grid > .announcement-card {
+        padding: 14px 14px 18px;
+        border-radius: 16px;
+      }
+      .news-grid .announcement-card h2 {
+        font-size: 24px;
+      }
+      .news-grid .announcement-card > .news-card-link > p:last-of-type {
+        font-size: 14px;
+        -webkit-line-clamp: 5;
+      }
     }
   </style>
 </head>
@@ -85,113 +158,113 @@
     <p class="seo-note">Canonical URL: https://tencent.pk/news/</p>
     <section class="news-grid">
       <article class="announcement-card">
-          <a class="news-card-link" href="/news/2026-03-17-version-4-3-official-verification-and-title-recipients/">
-            <img src="https://cdn-pubgm-cms.vasdgame.com/vasd-cms-pubgm/prod/3_2eab54826f.png" alt="Version 4.3 Official Verification and Title Recipients" loading="lazy">
-            <p class="news-card-date">2026-03-17</p>
-            <h2>Version 4.3 Official Verification and Title Recipients</h2>
-            <p>Dear Players, We wish to thank each and every player for their support. Now, we would like to announce the list of official verification and title recipients for Version 4.3. Influencers Creators Comm...</p>
-            <span class="lnk-btn">Read Article</span>
-          </a>
-        </article>
-<article class="announcement-card">
-          <a class="news-card-link" href="/news/2026-03-11-v4-3-update-announcement/">
-            <img src="https://cdn-pubgm-cms.vasdgame.com/vasd-cms-pubgm/prod/EN_7b7717d95d.jpg" alt="V4.3 Update Announcement" loading="lazy">
-            <p class="news-card-date">2026-03-11</p>
-            <h2>V4.3 Update Announcement</h2>
-            <p>PUBG MOBILE will begin pushing out the Version 4.3 Evolving Universe update without interrupting service on March 12. The update should be available to all players by March 12 at 11:00 (UTC+0). Any ch...</p>
-            <span class="lnk-btn">Read Article</span>
-          </a>
-        </article>
-<article class="announcement-card">
-          <a class="news-card-link" href="/news/2026-02-12-v4-3-beta-test-3-update-announcement/">
-            <img src="https://cdn-pubgm-cms.vasdgame.com/vasd-cms-pubgm/prod/en_9b24d5796e.jpg" alt="V4.3 Beta Test 3 Update Announcement" loading="lazy">
-            <p class="news-card-date">2026-02-12</p>
-            <h2>V4.3 Beta Test 3 Update Announcement</h2>
-            <p>Dear Players, To give everyone a better gaming experience, Version 4.3&#x27;s third beta test is scheduled for February 12. The new themed Temporal Vault is here. In-game treasure hunting awaits. Unlock fo...</p>
-            <span class="lnk-btn">Read Article</span>
-          </a>
-        </article>
-<article class="announcement-card">
-          <a class="news-card-link" href="/news/2026-02-04-skyhigh-spectacle-themed-mode-return-announcement/">
-            <img src="https://cdn-pubgm-cms.vasdgame.com/vasd-cms-pubgm/prod/EN_12b5db67e1.png" alt="Skyhigh Spectacle Themed Mode Return Announcement" loading="lazy">
-            <p class="news-card-date">2026-02-04</p>
-            <h2>Skyhigh Spectacle Themed Mode Return Announcement</h2>
-            <p>Dear Players, The dormant legend reawakens, and the magical kingdom above the clouds is about to reappear. The highly anticipated Skyhigh Spectacle themed mode will make a grand return on February 5!...</p>
-            <span class="lnk-btn">Read Article</span>
-          </a>
-        </article>
-<article class="announcement-card">
-          <a class="news-card-link" href="/news/2026-01-29-v4-3-beta-test-1-update-announcement/">
-            <img src="https://cdn-pubgm-cms.vasdgame.com/vasd-cms-pubgm/prod/en_0fa5ddc30e.jpg" alt="V4.3 Beta Test 1 Update Announcement" loading="lazy">
-            <p class="news-card-date">2026-01-29</p>
-            <h2>V4.3 Beta Test 1 Update Announcement</h2>
-            <p>Dear Players, To give everyone a better gaming experience, Version 4.3&#x27;s first beta test is scheduled for January 29. The new themed mode is here, featuring five skill specializations: Healing, Recon,...</p>
-            <span class="lnk-btn">Read Article</span>
-          </a>
-        </article>
-<article class="announcement-card">
-          <a class="news-card-link" href="/news/2026-01-09-qr-code-authorized-login-faq/">
-            <img src="https://cdn-pubgm-cms.vasdgame.com/vasd-cms-pubgm/prod/_bb0b664611.jpg" alt="QR Code Authorized Login FAQ" loading="lazy">
-            <p class="news-card-date">2026-01-09</p>
-            <h2>QR Code Authorized Login FAQ</h2>
-            <p>Dear Player, We have compiled a list of frequently asked questions and answers to help with any problems you might have with using the QR Code Authorized Login feature. Please refer to them below: Q:...</p>
-            <span class="lnk-btn">Read Article</span>
-          </a>
-        </article>
-<article class="announcement-card">
-          <a class="news-card-link" href="/news/2026-01-08-version-4-2-official-verification-and-title-recipients/">
-            <img src="https://cdn-pubgm-cms.vasdgame.com/vasd-cms-pubgm/prod/3_e14507e981.png" alt="​Version 4.2 Official Verification and Title Recipients" loading="lazy">
-            <p class="news-card-date">2026-01-08</p>
-            <h2>​Version 4.2 Official Verification and Title Recipients</h2>
-            <p>Dear Players, We wish to thank each and every player for their support. Now, we would like to announce the list of official verification and title recipients for Version 4.2. Influencers Creators Comm...</p>
-            <span class="lnk-btn">Read Article</span>
-          </a>
-        </article>
-<article class="announcement-card">
-          <a class="news-card-link" href="/news/2026-01-06-v4-2-update-announcement/">
-            <img src="https://cdn-pubgm-cms.vasdgame.com/vasd-cms-pubgm/prod/EN_c089452713.jpg" alt="V4.2 Update Announcement" loading="lazy">
-            <p class="news-card-date">2026-01-06</p>
-            <h2>V4.2 Update Announcement</h2>
-            <p>PUBG MOBILE will begin pushing out the Version 4.2 Primewood Genesis update without interrupting service on January 7, and should be available to all players by January 7 at 11:00 (UTC+0). The actual...</p>
-            <span class="lnk-btn">Read Article</span>
-          </a>
-        </article>
-<article class="announcement-card">
-          <a class="news-card-link" href="/news/2025-12-29-get-the-metro-royale-wallpaper/">
-            <img src="https://cdn-pubgm-cms.vasdgame.com/vasd-cms-pubgm/prod/1330_800_68e1a80558.jpg" alt="Get the Metro Royale wallpaper!" loading="lazy">
-            <p class="news-card-date">2025-12-29</p>
-            <h2>Get the Metro Royale wallpaper!</h2>
-            <p>Read the latest official PUBG Mobile announcement: Get the Metro Royale wallpaper!.</p>
-            <span class="lnk-btn">Read Article</span>
-          </a>
-        </article>
-<article class="announcement-card">
-          <a class="news-card-link" href="/news/2025-12-20-v4-2-beta-test-3-update-announcement/">
-            <img src="https://cdn-pubgm-cms.vasdgame.com/vasd-cms-pubgm/prod/en_8b85c8c120.jpg" alt="V4.2 Beta Test 3 Update Announcement" loading="lazy">
-            <p class="news-card-date">2025-12-20</p>
-            <h2>V4.2 Beta Test 3 Update Announcement</h2>
-            <p>Dear Players, To give everyone a better gaming experience, Version 4.2&#x27;s third beta test is scheduled for December 18. A new season of Metro Royale has arrived, bringing with it the new Fabled melee w...</p>
-            <span class="lnk-btn">Read Article</span>
-          </a>
-        </article>
-<article class="announcement-card">
-          <a class="news-card-link" href="/news/2025-12-12-v4-2-beta-test-2-update-announcement/">
-            <img src="https://cdn-pubgm-cms.vasdgame.com/vasd-cms-pubgm/prod/en_2f8fbb1127.jpg" alt="V4.2 Beta Test 2 Update Announcement" loading="lazy">
-            <p class="news-card-date">2025-12-12</p>
-            <h2>V4.2 Beta Test 2 Update Announcement</h2>
-            <p>Dear Players, To give everyone a better gaming experience, Version 4.2&#x27;s second beta test is scheduled for December 11. Traverse the Primewood Heart to obtain the Prime Eye. This artifact contains a m...</p>
-            <span class="lnk-btn">Read Article</span>
-          </a>
-        </article>
-<article class="announcement-card">
-          <a class="news-card-link" href="/news/2025-12-05-v4-2-beta-1-update-announcement/">
-            <img src="https://cdn-pubgm-cms.vasdgame.com/vasd-cms-pubgm/prod/en_99721fa6f3.jpg" alt="V4.2 Beta 1 Update Announcement" loading="lazy">
-            <p class="news-card-date">2025-12-05</p>
-            <h2>V4.2 Beta 1 Update Announcement</h2>
-            <p>Dear Players: To give everyone a better gaming experience, Version 4.2&#x27;s first beta test is scheduled for December 4. The power of the Sacred Tree awakens, and the world is turned upside down! Cities...</p>
-            <span class="lnk-btn">Read Article</span>
-          </a>
-        </article>
+        <a class="news-card-link" href="/news/2026-03-17-version-4-3-official-verification-and-title-recipients/">
+          <div class="news-card-media"><img src="https://cdn-pubgm-cms.vasdgame.com/vasd-cms-pubgm/prod/3_2eab54826f.png" alt="Version 4.3 Official Verification and Title Recipients" loading="lazy"></div>
+          <p class="news-card-date">2026-03-17</p>
+          <h2>Version 4.3 Official Verification and Title Recipients</h2>
+          <p>Dear Players, We wish to thank each and every player for their support. Now, we would like to announce the list of official verification and title recipients for Version 4.3. Influencers Creators Comm...</p>
+          <span class="lnk-btn">Read Article</span>
+        </a>
+      </article>
+      <article class="announcement-card">
+        <a class="news-card-link" href="/news/2026-03-11-v4-3-update-announcement/">
+          <div class="news-card-media"><img src="https://cdn-pubgm-cms.vasdgame.com/vasd-cms-pubgm/prod/EN_7b7717d95d.jpg" alt="V4.3 Update Announcement" loading="lazy"></div>
+          <p class="news-card-date">2026-03-11</p>
+          <h2>V4.3 Update Announcement</h2>
+          <p>PUBG MOBILE will begin pushing out the Version 4.3 Evolving Universe update without interrupting service on March 12. The update should be available to all players by March 12 at 11:00 (UTC+0). Any ch...</p>
+          <span class="lnk-btn">Read Article</span>
+        </a>
+      </article>
+      <article class="announcement-card">
+        <a class="news-card-link" href="/news/2026-02-12-v4-3-beta-test-3-update-announcement/">
+          <div class="news-card-media"><img src="https://cdn-pubgm-cms.vasdgame.com/vasd-cms-pubgm/prod/en_9b24d5796e.jpg" alt="V4.3 Beta Test 3 Update Announcement" loading="lazy"></div>
+          <p class="news-card-date">2026-02-12</p>
+          <h2>V4.3 Beta Test 3 Update Announcement</h2>
+          <p>Dear Players, To give everyone a better gaming experience, Version 4.3&#x27;s third beta test is scheduled for February 12. The new themed Temporal Vault is here. In-game treasure hunting awaits. Unlock fo...</p>
+          <span class="lnk-btn">Read Article</span>
+        </a>
+      </article>
+      <article class="announcement-card">
+        <a class="news-card-link" href="/news/2026-02-04-skyhigh-spectacle-themed-mode-return-announcement/">
+          <div class="news-card-media"><img src="https://cdn-pubgm-cms.vasdgame.com/vasd-cms-pubgm/prod/EN_12b5db67e1.png" alt="Skyhigh Spectacle Themed Mode Return Announcement" loading="lazy"></div>
+          <p class="news-card-date">2026-02-04</p>
+          <h2>Skyhigh Spectacle Themed Mode Return Announcement</h2>
+          <p>Dear Players, The dormant legend reawakens, and the magical kingdom above the clouds is about to reappear. The highly anticipated Skyhigh Spectacle themed mode will make a grand return on February 5!...</p>
+          <span class="lnk-btn">Read Article</span>
+        </a>
+      </article>
+      <article class="announcement-card">
+        <a class="news-card-link" href="/news/2026-01-29-v4-3-beta-test-1-update-announcement/">
+          <div class="news-card-media"><img src="https://cdn-pubgm-cms.vasdgame.com/vasd-cms-pubgm/prod/en_0fa5ddc30e.jpg" alt="V4.3 Beta Test 1 Update Announcement" loading="lazy"></div>
+          <p class="news-card-date">2026-01-29</p>
+          <h2>V4.3 Beta Test 1 Update Announcement</h2>
+          <p>Dear Players, To give everyone a better gaming experience, Version 4.3&#x27;s first beta test is scheduled for January 29. The new themed mode is here, featuring five skill specializations: Healing, Recon,...</p>
+          <span class="lnk-btn">Read Article</span>
+        </a>
+      </article>
+      <article class="announcement-card">
+        <a class="news-card-link" href="/news/2026-01-09-qr-code-authorized-login-faq/">
+          <div class="news-card-media"><img src="https://cdn-pubgm-cms.vasdgame.com/vasd-cms-pubgm/prod/_bb0b664611.jpg" alt="QR Code Authorized Login FAQ" loading="lazy"></div>
+          <p class="news-card-date">2026-01-09</p>
+          <h2>QR Code Authorized Login FAQ</h2>
+          <p>Dear Player, We have compiled a list of frequently asked questions and answers to help with any problems you might have with using the QR Code Authorized Login feature. Please refer to them below: Q:...</p>
+          <span class="lnk-btn">Read Article</span>
+        </a>
+      </article>
+      <article class="announcement-card">
+        <a class="news-card-link" href="/news/2026-01-08-version-4-2-official-verification-and-title-recipients/">
+          <div class="news-card-media"><img src="https://cdn-pubgm-cms.vasdgame.com/vasd-cms-pubgm/prod/3_e14507e981.png" alt="Version 4.2 Official Verification and Title Recipients" loading="lazy"></div>
+          <p class="news-card-date">2026-01-08</p>
+          <h2>Version 4.2 Official Verification and Title Recipients</h2>
+          <p>Dear Players, We wish to thank each and every player for their support. Now, we would like to announce the list of official verification and title recipients for Version 4.2. Influencers Creators Comm...</p>
+          <span class="lnk-btn">Read Article</span>
+        </a>
+      </article>
+      <article class="announcement-card">
+        <a class="news-card-link" href="/news/2026-01-06-v4-2-update-announcement/">
+          <div class="news-card-media"><img src="https://cdn-pubgm-cms.vasdgame.com/vasd-cms-pubgm/prod/EN_c089452713.jpg" alt="V4.2 Update Announcement" loading="lazy"></div>
+          <p class="news-card-date">2026-01-06</p>
+          <h2>V4.2 Update Announcement</h2>
+          <p>PUBG MOBILE will begin pushing out the Version 4.2 Primewood Genesis update without interrupting service on January 7, and should be available to all players by January 7 at 11:00 (UTC+0). The actual...</p>
+          <span class="lnk-btn">Read Article</span>
+        </a>
+      </article>
+      <article class="announcement-card">
+        <a class="news-card-link" href="/news/2025-12-29-get-the-metro-royale-wallpaper/">
+          <div class="news-card-media"><img src="https://cdn-pubgm-cms.vasdgame.com/vasd-cms-pubgm/prod/1330_800_68e1a80558.jpg" alt="Get the Metro Royale wallpaper!" loading="lazy"></div>
+          <p class="news-card-date">2025-12-29</p>
+          <h2>Get the Metro Royale wallpaper!</h2>
+          <p>Read the latest official PUBG Mobile announcement: Get the Metro Royale wallpaper!.</p>
+          <span class="lnk-btn">Read Article</span>
+        </a>
+      </article>
+      <article class="announcement-card">
+        <a class="news-card-link" href="/news/2025-12-20-v4-2-beta-test-3-update-announcement/">
+          <div class="news-card-media"><img src="https://cdn-pubgm-cms.vasdgame.com/vasd-cms-pubgm/prod/en_8b85c8c120.jpg" alt="V4.2 Beta Test 3 Update Announcement" loading="lazy"></div>
+          <p class="news-card-date">2025-12-20</p>
+          <h2>V4.2 Beta Test 3 Update Announcement</h2>
+          <p>Dear Players, To give everyone a better gaming experience, Version 4.2&#x27;s third beta test is scheduled for December 18. A new season of Metro Royale has arrived, bringing with it the new Fabled melee w...</p>
+          <span class="lnk-btn">Read Article</span>
+        </a>
+      </article>
+      <article class="announcement-card">
+        <a class="news-card-link" href="/news/2025-12-12-v4-2-beta-test-2-update-announcement/">
+          <div class="news-card-media"><img src="https://cdn-pubgm-cms.vasdgame.com/vasd-cms-pubgm/prod/en_2f8fbb1127.jpg" alt="V4.2 Beta Test 2 Update Announcement" loading="lazy"></div>
+          <p class="news-card-date">2025-12-12</p>
+          <h2>V4.2 Beta Test 2 Update Announcement</h2>
+          <p>Dear Players, To give everyone a better gaming experience, Version 4.2&#x27;s second beta test is scheduled for December 11. Traverse the Primewood Heart to obtain the Prime Eye. This artifact contains a m...</p>
+          <span class="lnk-btn">Read Article</span>
+        </a>
+      </article>
+      <article class="announcement-card">
+        <a class="news-card-link" href="/news/2025-12-05-v4-2-beta-1-update-announcement/">
+          <div class="news-card-media"><img src="https://cdn-pubgm-cms.vasdgame.com/vasd-cms-pubgm/prod/en_99721fa6f3.jpg" alt="V4.2 Beta 1 Update Announcement" loading="lazy"></div>
+          <p class="news-card-date">2025-12-05</p>
+          <h2>V4.2 Beta 1 Update Announcement</h2>
+          <p>Dear Players: To give everyone a better gaming experience, Version 4.2&#x27;s first beta test is scheduled for December 4. The power of the Sacred Tree awakens, and the world is turned upside down! Cities...</p>
+          <span class="lnk-btn">Read Article</span>
+        </a>
+      </article>
     </section>
   </main>
 </body>
